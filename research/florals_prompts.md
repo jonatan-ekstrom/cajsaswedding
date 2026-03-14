@@ -119,6 +119,143 @@ Two watercolor botanical corner arrangements on a transparent background, placed
 
 ---
 
+## 10. Single Blue Anemone Flower Head
+
+**Use:** A tiny accent flower used near section headings or as a small decorative element in corners. Adds a pop of the dusty blue accent color.
+
+**Prompt:**
+```
+Single watercolor dusty steel-blue anemone flower head on a plain white background. One delicate open bloom viewed from slightly above, showing soft blue-gray petals with a dark center. A few small sage green leaves at the base of the flower. Soft wet-on-wet watercolor technique with translucent petal washes, visible color bleeding, and feathered edges. Muted dusty blue tone, not bright or saturated. Simple, minimal, centered composition with generous white space. Hand-painted botanical wedding stationery style. No stem, no text, no frame.
+```
+
+---
+
+## 11. Long Trailing Eucalyptus Garland
+
+**Use:** A wide horizontal eucalyptus vine used as an inline decorative element below section headings. Greenery-only, no flowers.
+
+**Prompt:**
+```
+Wide horizontal watercolor eucalyptus garland on a plain white background. A long, flowing trail of sage green and olive eucalyptus branches extending from left to right, with heart-shaped eucalyptus populus leaves and elongated silver dollar eucalyptus leaves alternating along thin brown-green stems. A few tiny white gypsophila sprigs scattered along the length. No flowers, just greenery. The composition is very wide and narrow, like a natural trailing vine. Soft translucent watercolor technique with wet-on-wet blending, visible brushstrokes, and feathered leaf edges. Muted sage and olive green tones ranging from dark olive to pale transparent wash. Elegant hand-painted wedding stationery style. No text, no frame, no borders.
+```
+
+---
+
+## 12. Small Olive Branch with Berries
+
+**Use:** A small greenery accent for the Bröllopsdag section top-left corner. Different leaf shape from the sprig-accent to avoid visual repetition.
+
+**Prompt:**
+```
+Small watercolor olive branch on a plain white background. A single graceful curved stem with six to eight narrow elongated olive-green leaves and a cluster of three tiny round green berries at the tip. Soft wet-on-wet watercolor technique with translucent leaf washes in muted sage and olive tones. Simple, minimal, delicate composition with generous white space. Hand-painted botanical wedding stationery style. No flowers, no text, no frame.
+```
+
+---
+
+## 13. Dusty Blue Flower Bud Sprig
+
+**Use:** A small blue accent for the FAQ section top-right corner. Adds a touch of the dusty blue accent color to balance the greenery.
+
+**Prompt:**
+```
+Small watercolor sprig with two dusty steel-blue flower buds on a plain white background. Two closed buds on thin branching stems with three small sage green leaves. Soft wet-on-wet watercolor technique with translucent washes and feathered edges. Muted dusty blue and sage green tones. Simple, minimal, airy composition with generous white space. Hand-painted botanical wedding stationery style. No fully open flowers, no text, no frame.
+```
+
+---
+
+## 14. Heart-Shaped Eucalyptus Populus Branch
+
+**Use:** A single branch with heart-shaped leaves for the FAQ section bottom-left corner. Replaces eucalyptus-branch to avoid asset duplication with the Plats section.
+
+**Prompt:**
+```
+Single watercolor eucalyptus populus branch on a plain white background. One gently curving stem with eight to ten alternating heart-shaped leaves in varying shades of sage green, from dark olive to pale translucent wash. Leaves are rounder and more heart-shaped than typical eucalyptus. Soft wet-on-wet watercolor technique with visible color gradients within each leaf and subtle color bleeding at edges. Simple, minimal, delicate. Hand-painted botanical illustration style. No flowers, no text, no frame.
+```
+
+---
+
+## 15. Gåvor Corner Cluster — Top Right
+
+**Use:** A corner cluster with dusty blue rose for the Gåvor section top-right corner. Paired with prompt 16 for bottom-left.
+
+**Prompt:**
+```
+Delicate watercolor botanical corner arrangement on a plain white background, positioned in the top-right corner. The cluster features one dusty steel-blue garden rose as the focal point, surrounded by sage green and olive eucalyptus branches with small white gypsophila sprigs. The foliage extends downward and to the left from the corner in a natural cascading arc. Soft wet-on-wet watercolor technique with translucent washes, feathered edges, and muted earthy green tones. Elegant romantic hand-painted wedding stationery style. No text, no borders, no frame.
+```
+
+---
+
+## 16. Gåvor Corner Cluster — Bottom Left
+
+**Use:** A corner cluster with dusty blue rose for the Gåvor section bottom-left corner. Paired with prompt 15 for top-right.
+
+**Prompt:**
+```
+Delicate watercolor botanical corner arrangement on a plain white background, positioned in the bottom-left corner. The cluster features one dusty steel-blue garden rose and trailing sage green eucalyptus branches with heart-shaped leaves and small white baby's breath flowers. The foliage extends upward and to the right from the corner in a natural sweeping arc. Soft wet-on-wet watercolor technique with translucent washes, feathered edges, and muted sage olive green tones. Elegant hand-painted botanical wedding style. No text, no borders, no frame.
+```
+
+---
+
+## 17. Gåvor Corner — Top Right (Square, Soft Edges)
+
+**Use:** Replacement for prompt 15 which had hard edges. Square canvas with gradual fadeout, designed for direct TR corner placement with `scaleX(-1)` mirror.
+
+**Prompt:**
+```
+Delicate watercolor botanical corner arrangement on a plain white background. The cluster is positioned tightly in the top-right corner of a square canvas. One dusty steel-blue garden rose as the focal point with sage green and olive eucalyptus leaves cascading diagonally toward the bottom-left. Small white gypsophila sprigs and tiny buds fill the gaps. The foliage fades out gradually with soft feathered edges toward the center, no hard lines or abrupt cutoffs. Soft wet-on-wet watercolor technique with translucent washes. Muted earthy green and dusty blue tones. Elegant romantic hand-painted wedding stationery style. No text, no borders, no frame.
+```
+
+---
+
+## 18. Gåvor Corner Cluster — Centered with Soft Fadeout (Replaces Prompt 16)
+
+**Use:** Replacement for `gavor-corner-bl.png` which has botanical content extending to the canvas edges, causing hard visible borders at section transitions. This version centers the cluster in the middle of the square with generous transparent padding on all sides. Used at Boende BR (CSS mirrored), Gåvor TR (CSS mirror-xy), and Gåvor BL (CSS mirror-y).
+
+**Prompt:**
+```
+Delicate watercolor botanical cluster centered in the middle of a square canvas on a plain white background. The cluster features one dusty steel-blue garden rose as the focal point, surrounded by trailing sage green and olive eucalyptus branches with heart-shaped leaves and small white baby's breath flowers. The foliage radiates outward from the center in a natural organic shape, like a loose bouquet viewed from above. Crucially, all leaves and stems fade out gradually to nothing well before reaching the edges of the canvas — there should be generous empty white space on all four sides, at least 20% of the canvas width. No foliage or stems should touch or come close to any edge. Soft wet-on-wet watercolor technique with translucent washes, feathered edges, and muted sage olive green tones. Elegant hand-painted botanical wedding style. No text, no borders, no frame.
+```
+
+**Post-processing notes:**
+- Remove white background as usual
+- The resulting PNG should have transparent padding on all sides
+- Deploy as `florals/gavor-corner-bl.png` (overwriting the old version)
+- No CSS changes needed — existing mirror transforms handle all three placements
+
+---
+
+## 19. Boende Corner — White Roses with Eucalyptus (Centered)
+
+**Use:** Unique botanical for Boende section bottom-right corner. Features white/cream roses to complement the `roses-cluster.png` in the top-left, but as a smaller, different arrangement. Centered with generous padding to avoid hard edges at section transitions.
+
+**Prompt:**
+```
+Delicate watercolor botanical cluster centered in the middle of a square canvas on a plain white background. The cluster features two small white cream garden rosebuds and one half-open white rose, with trailing sage green eucalyptus branches and a few small round eucalyptus seed pods. The arrangement is compact and asymmetric, like a small hand-tied posy viewed from above. All foliage and petals fade out gradually to nothing well before reaching the edges of the canvas — generous empty white space on all four sides, at least 25% of the canvas width on each side. No stems or leaves should touch or approach any edge of the canvas. Soft wet-on-wet watercolor technique with translucent washes, feathered edges, and muted sage olive green tones with warm ivory rose petals. Elegant hand-painted botanical wedding style. No blue flowers, only greens and whites. No text, no borders, no frame.
+```
+
+**Post-processing notes:**
+- Remove white background as usual
+- Deploy as `florals/boende-corner.png`
+- HTML: replace `gavor-corner-bl.png` reference in Boende section (line 199)
+
+---
+
+## 20. Gåvor Corner — Dusty Blue Anemone Cluster (Centered)
+
+**Use:** Unique botanical for Gåvor section top-right corner. Features a dusty blue anemone (different flower type from the rose in `gavor-corner-bl.png`) to give the gift section visual variety. Centered with generous padding.
+
+**Prompt:**
+```
+Delicate watercolor botanical cluster centered in the middle of a square canvas on a plain white background. The cluster features one open dusty steel-blue anemone flower with a dark center as the focal point, accompanied by two small unopened blue-gray buds, surrounded by sage green and olive eucalyptus leaves and delicate sprigs of white gypsophila (baby's breath). The arrangement is loose and organic, radiating outward from the center. All foliage and petals fade out gradually to nothing well before reaching the edges of the canvas — generous empty white space on all four sides, at least 25% of the canvas width on each side. No stems or leaves should touch or approach any edge of the canvas. Soft wet-on-wet watercolor technique with translucent washes, feathered edges, and muted sage olive green and dusty blue tones. Elegant hand-painted botanical wedding style. No text, no borders, no frame.
+```
+
+**Post-processing notes:**
+- Remove white background as usual
+- Deploy as `florals/gavor-corner-tr.png` (overwriting the old unused version)
+- HTML: replace `gavor-corner-bl.png` reference in Gåvor TR position (line 241)
+
+---
+
 ## Color Reference for All Prompts
 
 When Copilot results come out with wrong tones, try adding these specific color callouts:
@@ -135,7 +272,7 @@ When Copilot results come out with wrong tones, try adding these specific color 
 
 ## Post-Processing Status
 
-All 9 prompts have been generated and post-processed (backgrounds removed, transparent PNGs). They are deployed to `assets/images/florals/`.
+All 20 prompts have been generated and post-processed (backgrounds removed, transparent PNGs). They are deployed to `assets/images/florals/`.
 
 ### Deployed Asset Mapping
 
@@ -143,16 +280,34 @@ All 9 prompts have been generated and post-processed (backgrounds removed, trans
 |--------|-----------|---------|
 | prompt1.png | `florals/corner-top-right.png` | Hero — top-right corner |
 | prompt2.png | `florals/corner-bottom-left.png` | Hero — bottom-left corner (CSS flipped Y) |
-| prompt3.png | `florals/sprig-accent.png` | Bröllopsdag BR, Gåvor TR |
-| prompt4.png | `florals/garland-divider.png` | Available (not yet placed) |
-| prompt5.png | `florals/eucalyptus-branch.png` | Plats BL, FAQ BL |
+| prompt3.png | `florals/sprig-accent.png` | Bröllopsdag BR |
+| prompt5.png | `florals/eucalyptus-branch.png` | Plats BL |
 | prompt6.png | `florals/floral-wreath.png` | Hero — frames countdown timer |
-| prompt7.png | `florals/scattered-leaves.png` | Available (not yet placed) |
 | prompt8.png | `florals/roses-cluster.png` | Boende TL |
-| prompt9.png | `florals/corner-frame-pair.png` | Available (not yet placed) |
+| prompt10.png | `florals/blue-anemone.png` | Plats TR — small blue accent |
+| prompt11.png | `florals/eucalyptus-garland.png` | Boende — inline below card |
+| prompt12.png | `florals/olive-branch.png` | Gåvor TR — small greenery accent |
+| prompt13.png | `florals/blue-bud-sprig.png` | FAQ TR — small blue accent |
+| prompt14.png | `florals/eucalyptus-populus.png` | FAQ BL — heart-shaped leaf branch |
+| prompt18.png | `florals/gavor-corner-bl.png` | Gåvor BL — blue rose (centered, soft edges) |
+| prompt19.png | `florals/boende-corner.png` | Boende BR — white roses (centered, soft edges) |
+| prompt20.png | `florals/gavor-corner-tr.png` | Bröllopsdag TL — blue anemone (centered, soft edges) |
+
+### Removed Assets
+
+| Prompt | Former Path | Reason |
+|--------|-----------|--------|
+| prompt4.png | `florals/garland-divider.png` | Never placed, removed |
+| prompt7.png | `florals/scattered-leaves.png` | Never placed, removed |
+| prompt9.png | `florals/corner-frame-pair.png` | Replaced by prompt15+16, removed |
+| prompt15.png | `florals/gavor-corner-tr.png` | Replaced by prompt17, then prompt20 |
+| prompt16.png | `florals/gavor-corner-bl.png` | Replaced by prompt18 |
+| prompt17.png | `florals/gavor-corner-tr.png` | Replaced by prompt20 |
 
 ### Re-generation Notes
 
 - **prompt5** was re-generated to show a full twig (original was cut off at the top)
+- **prompt16** → **prompt18**: Original had botanical content extending to canvas edges, causing hard borders at section transitions. New version centers the cluster with generous transparent padding.
+- **prompt19/20**: New centered assets to eliminate reuse of gavor-corner-bl across multiple sections. Each section now has a unique asset.
 - When re-generating any prompt, remember to remove the white background before deploying
 - Target resolution: at least 1000px on longest side for large elements, 500px for small accents

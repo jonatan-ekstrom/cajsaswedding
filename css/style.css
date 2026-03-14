@@ -466,6 +466,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
   object-fit: contain;
   height: auto;
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at center, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 80% at center, black 40%, transparent 100%);
 }
 
 .botanical-tr {
@@ -518,9 +520,30 @@ h1, h2, h3, h4, h5, h6 {
   transform: scaleY(-1);
 }
 
+.botanical-mirror-xy {
+  transform: scaleX(-1) scaleY(-1);
+}
+
 .botanical-rotate {
   transform: rotate(15deg);
 }
+
+/* Inline botanical — centered, in-flow decorative images (garlands, horizontal elements) */
+.botanical-inline {
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+  width: clamp(200px, 50vw, 450px);
+  height: auto;
+  opacity: 0.35;
+  object-fit: contain;
+}
+
+.botanical-inline--wide {
+  width: clamp(250px, 70vw, 600px);
+}
+
+/* Gåvor section — larger corners need more offset to hide image edges */
 
 
 /* --- 8. Components --- */
@@ -1030,6 +1053,9 @@ summary:focus-visible {
   .botanical {
     opacity: 0.15;
   }
+  .botanical-inline {
+    opacity: 0.1;
+  }
 }
 
 
@@ -1091,6 +1117,15 @@ summary:focus-visible {
     opacity: 0.35;
   }
 
+  .botanical-inline {
+    width: clamp(160px, 55vw, 300px);
+    opacity: 0.25;
+  }
+
+  .botanical-inline--wide {
+    width: clamp(180px, 65vw, 400px);
+  }
+
   /* Timeline adjust */
   .timeline::before {
     left: 55px;
@@ -1135,6 +1170,15 @@ summary:focus-visible {
 
   .swish-contacts {
     grid-template-columns: 1fr;
+  }
+
+  .botanical-inline {
+    width: 150px;
+    opacity: 0.2;
+  }
+
+  .botanical-inline--wide {
+    width: clamp(140px, 60vw, 280px);
   }
 
   .footer-contacts {
