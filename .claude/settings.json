@@ -1,0 +1,28 @@
+{
+    "$schema": "https://json.schemastore.org/claude-code-settings.json",
+    "defaultMode": "default",
+    "hooks": {
+        "PreToolUse": [
+            {
+                "matcher": "Bash",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "python .claude/hooks/perms.py",
+                        "timeout": 5000
+                    }
+                ]
+            }
+        ]
+    },
+    "permissions": {
+        "allow": [
+            "Edit(scratchpad/**)",
+            "Write(scratchpad/**)",
+            "Skill",
+            "WebFetch",
+            "WebSearch"
+        ],
+        "deny": []
+    }
+}
