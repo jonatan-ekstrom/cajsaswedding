@@ -95,6 +95,10 @@ wedding/
     └── *.jpg         # Invitation photos for design reference
 ```
 
+## Agent Guidelines
+
+- **Always run sub-agents in the foreground** (never set `run_in_background: true`). Background agents cannot inherit the session's permission mode and will silently fail on Write/Edit operations. Foreground agents launched in the same message still run in parallel, so there is no concurrency penalty.
+
 ## Development Guidelines
 
 - Mobile-first responsive design — most guests will view on phones
