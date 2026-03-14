@@ -46,12 +46,12 @@
     <!-- ===== HERO ===== -->
     <section class="hero section" id="hero">
       <!-- Botanical decorations -->
-      <img src="assets/images/botanicals/wedding-corner-floral.png"
+      <img src="assets/images/florals/corner-top-right.png"
            alt="" role="presentation" aria-hidden="true"
            class="botanical botanical-tr" loading="eager" />
-      <img src="assets/images/botanicals/wedding-floral-invitation.png"
+      <img src="assets/images/florals/corner-bottom-left.png"
            alt="" role="presentation" aria-hidden="true"
-           class="botanical botanical-bl botanical-mirror" loading="eager" />
+           class="botanical botanical-bl botanical-mirror-y" loading="eager" />
 
       <div class="hero-content">
         <p class="hero-pretext">Vi gifter oss!</p>
@@ -61,33 +61,45 @@
           <span class="name">Filip</span>
         </h1>
         <p class="hero-date">Lördag 23 maj 2026</p>
-        <div class="countdown" aria-label="Nedräkning till bröllopet">
-          <div class="countdown-unit">
-            <span class="countdown-number" id="countdown-days">00</span>
-            <span class="countdown-label">dagar</span>
-          </div>
-          <div class="countdown-separator" aria-hidden="true">:</div>
-          <div class="countdown-unit">
-            <span class="countdown-number" id="countdown-hours">00</span>
-            <span class="countdown-label">timmar</span>
-          </div>
-          <div class="countdown-separator" aria-hidden="true">:</div>
-          <div class="countdown-unit">
-            <span class="countdown-number" id="countdown-minutes">00</span>
-            <span class="countdown-label">minuter</span>
-          </div>
-          <div class="countdown-separator" aria-hidden="true">:</div>
-          <div class="countdown-unit">
-            <span class="countdown-number" id="countdown-seconds">00</span>
-            <span class="countdown-label">sekunder</span>
+        <div class="countdown-wrapper">
+          <img src="assets/images/florals/floral-wreath.png"
+               alt="" role="presentation" aria-hidden="true"
+               class="countdown-wreath" loading="eager" />
+          <div class="countdown" aria-label="Nedräkning till bröllopet">
+            <div class="countdown-unit">
+              <span class="countdown-number" id="countdown-days">00</span>
+              <span class="countdown-label">dagar</span>
+            </div>
+            <div class="countdown-separator" aria-hidden="true">:</div>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="countdown-hours">00</span>
+              <span class="countdown-label">timmar</span>
+            </div>
+            <div class="countdown-separator" aria-hidden="true">:</div>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="countdown-minutes">00</span>
+              <span class="countdown-label">minuter</span>
+            </div>
+            <div class="countdown-separator" aria-hidden="true">:</div>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="countdown-seconds">00</span>
+              <span class="countdown-label">sekunder</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Wave divider: hero → bröllopsdag -->
+    <div class="section-divider section-divider--cream" role="presentation" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,30 C240,50 480,10 720,30 C960,50 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--sage-tint)"/>
+      </svg>
+    </div>
+
     <!-- ===== BRÖLLOPSDAG ===== -->
-    <section class="section section--cream" id="brollopsdag">
-      <img src="assets/images/botanicals/eucalyptus-leaves.png"
+    <section class="section section--sage" id="brollopsdag">
+      <img src="assets/images/florals/sprig-accent.png"
            alt="" role="presentation" aria-hidden="true"
            class="botanical botanical-br botanical-faded botanical-rotate" loading="lazy" />
       <div class="section-content" data-aos="fade-up">
@@ -127,16 +139,16 @@
       </div>
     </section>
 
-    <!-- Wave divider: cream → sage-tint -->
-    <div class="section-divider section-divider--cream" role="presentation" aria-hidden="true">
+    <!-- Wave divider: sage-tint → cream -->
+    <div class="section-divider section-divider--sage" role="presentation" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
-        <path d="M0,30 C240,50 480,10 720,30 C960,50 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--sage-tint)"/>
+        <path d="M0,30 C240,50 480,10 720,30 C960,50 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--cream)"/>
       </svg>
     </div>
 
     <!-- ===== PLATS ===== -->
-    <section class="section section--sage" id="plats">
-      <img src="assets/images/botanicals/green-leaves-branch.png"
+    <section class="section section--cream" id="plats">
+      <img src="assets/images/florals/eucalyptus-branch.png"
            alt="" role="presentation" aria-hidden="true"
            class="botanical botanical-bl botanical-small" loading="lazy" />
       <div class="section-content" data-aos="fade-up">
@@ -166,16 +178,16 @@
       </div>
     </section>
 
-    <!-- Wave divider: sage-tint → cream -->
-    <div class="section-divider section-divider--flip" role="presentation" aria-hidden="true">
+    <!-- Wave divider: cream → sage-tint -->
+    <div class="section-divider section-divider--cream" role="presentation" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
-        <path d="M0,30 C240,50 480,10 720,30 C960,50 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--cream)"/>
+        <path d="M0,30 C240,50 480,10 720,30 C960,50 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--sage-tint)"/>
       </svg>
     </div>
 
     <!-- ===== BOENDE ===== -->
-    <section class="section section--cream" id="boende">
-      <img src="assets/images/botanicals/eucalyptus-leaves.png"
+    <section class="section section--sage" id="boende">
+      <img src="assets/images/florals/roses-cluster.png"
            alt="" role="presentation" aria-hidden="true"
            class="botanical botanical-tl botanical-faded" loading="lazy" />
       <div class="section-content" data-aos="fade-up">
@@ -206,7 +218,7 @@
     </section>
 
     <!-- Wave divider: boende → gåvor -->
-    <div class="section-divider section-divider--cream" role="presentation" aria-hidden="true">
+    <div class="section-divider section-divider--sage" role="presentation" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
         <path d="M0,30 C240,50 480,10 720,30 C960,50 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--cream-warm)"/>
       </svg>
@@ -214,7 +226,7 @@
 
     <!-- ===== GÅVOR ===== -->
     <section class="section section--warm" id="gavor">
-      <img src="assets/images/botanicals/blue-watercolor-flower.png"
+      <img src="assets/images/florals/sprig-accent.png"
            alt="" role="presentation" aria-hidden="true"
            class="botanical botanical-tr botanical-medium" loading="lazy" />
       <div class="section-content" data-aos="fade-up">
@@ -259,7 +271,7 @@
 
     <!-- ===== FAQ ===== -->
     <section class="section section--sage" id="faq">
-      <img src="assets/images/botanicals/green-leaves-branch.png"
+      <img src="assets/images/florals/eucalyptus-branch.png"
            alt="" role="presentation" aria-hidden="true"
            class="botanical botanical-bl botanical-small botanical-faded botanical-rotate" loading="lazy" />
       <div class="section-content" data-aos="fade-up">
