@@ -1,0 +1,123 @@
+# Cajsa & Filip's Wedding Website
+
+## Project Overview
+
+Static wedding website for **Cajsa Ekström & Filip Bringe**, hosted on GitHub Pages. Built by Jonatan Ekström (brother of the bride) as a gift/favor.
+
+- **Tech stack:** Plain HTML, CSS, and JavaScript — no build tools or frameworks
+- **Language:** Swedish
+- **Hosting:** GitHub Pages with custom domain (TBD)
+- **Repository:** `main` branch for deployment
+
+## Wedding Details
+
+| Detail | Value |
+|---|---|
+| **Couple** | Cajsa Ekström & Filip Bringe |
+| **Date** | Lördag 23 maj 2026, kl. 16:00 |
+| **Ceremony** | Gårdsby kyrka, 355 92 Växjö |
+| **Reception** | Teleborgs Slott, Slottsallén 33, 352 56 Växjö |
+| **Dress code** | Uppklädd klädsel |
+| **Contact email** | filipcajsa2026@gmail.com |
+| **RSVP deadline** | 31 mars 2026 (via email, NOT on the website) |
+| **Children policy** | Welcome at the ceremony; dinner/party is adults only (except nursing babies) |
+
+### Toastmasters
+
+| Name | Phone |
+|---|---|
+| Christian Boman | 070 225 91 08 |
+| Elin Bexell | 070 392 96 70 |
+
+### Accommodation
+
+Rooms available at Teleborgs Slott. Guests book directly:
+- Email: info@teleborgsslott.com
+- Phone: 0470-348980
+- Website: teleborgsslott.com
+- Mention the wedding when booking ("Cajsa & Filip")
+
+## Website Sections
+
+The site should include the following sections (single-page layout or minimal navigation):
+
+1. **Hero / Landing** — Names, date, countdown timer
+2. **Bröllopsdag (Schedule/Program)** — Timeline of the day (placeholder content for now)
+3. **Plats & Hitta hit (Venue & Getting there)** — Ceremony and reception locations, map, parking/transport info (placeholder details for now)
+4. **Boende (Accommodation)** — Info about Teleborgs Slott rooms + potentially other hotel tips
+5. **Gåvor / Bröllopsgåva (Gifts)** — **This is the primary reason for the website** (see below)
+6. **Bildgalleri (Photo gallery)** — Placeholder section for engagement/couple photos
+7. **Vanliga frågor (FAQ)** — Dress code, children policy, contact info, etc.
+
+## Gift Section — Key Feature
+
+The couple does **not** want traditional gifts. Instead, they want guests to contribute money toward their honeymoon. The system works as follows:
+
+- Guests send money via **Swish** to the **toastmasters** (Christian Boman & Elin Bexell), NOT directly to Cajsa & Filip
+- The toastmasters pool all contributions and give a lump sum to the couple after the wedding
+- This way Cajsa & Filip never know who gave what (or if someone chose not to give)
+- **No suggested amount** — completely voluntary and open
+- The page should display Swish QR codes and/or phone numbers for the toastmasters (placeholder for now — assets to be provided)
+- Tone: warm, no-pressure, appreciative — emphasize that presence is the greatest gift
+
+## Design Direction
+
+The design should match the physical invitations (photos in `tmp/` folder):
+
+- **Style:** Elegant, botanical, romantic
+- **Color palette:**
+  - White/cream background
+  - Sage/olive green (leaves, eucalyptus)
+  - Dusty/steel blue accent (flowers)
+  - Dark gray or charcoal for body text
+  - Warm gold or dark olive for accent text
+- **Typography:**
+  - Elegant script/cursive font for the couple's names and headings (similar to invitation)
+  - Clean serif or sans-serif for body text
+- **Decorative elements:** Watercolor-style botanical illustrations (leaves, roses, eucalyptus) — matching the invitation aesthetic
+- **Mood:** Light, airy, refined — lots of whitespace
+
+## File Structure
+
+```
+wedding/
+├── CLAUDE.md
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+├── assets/
+│   ├── images/       # Wedding photos, venue photos
+│   ├── icons/        # Swish logo, QR codes, etc.
+│   └── fonts/        # Custom fonts if needed
+└── tmp/              # Reference material (not deployed)
+    └── *.jpg         # Invitation photos for design reference
+```
+
+## Development Guidelines
+
+- Mobile-first responsive design — most guests will view on phones
+- Smooth scroll between sections
+- Keep JavaScript minimal — countdown timer, smooth scroll, maybe a simple lightbox for photos
+- Optimize images for web (compress, lazy-load)
+- Ensure accessibility (semantic HTML, alt text, sufficient contrast)
+- Test in Chrome, Safari, Firefox (mobile & desktop)
+- Use Google Fonts or similar for web fonts (find close matches to the invitation style)
+- All text content in Swedish
+
+## Content Placeholders
+
+The following content is TBD and should use clear placeholders:
+- [ ] Day's schedule/program details
+- [ ] Parking and transport information
+- [ ] Swish QR codes and numbers for toastmasters
+- [ ] Couple photos for the gallery
+- [ ] Additional FAQ items
+- [ ] Custom domain configuration
+
+## Notes
+
+- The `tmp/` folder contains reference photos of the physical invitations — do NOT deploy these
+- RSVP is handled via email (filipcajsa2026@gmail.com), not on the website
+- The toastmasters are the contact for speeches/entertainment (tal/spex)
