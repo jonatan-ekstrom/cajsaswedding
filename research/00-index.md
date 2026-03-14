@@ -10,6 +10,8 @@
 | `01-scandinavian-trends.md` | Nordic wedding website design patterns, section-by-section layout guidance, Swedish-specific elements |
 | `02-tech-stack.md` | CSS architecture, animation library, fonts, asset sourcing, countdown timer, navigation, images, maps |
 | `03-botanical-web-design.md` | Color palette, botanical CSS techniques, section dividers, hero design, accessibility, responsive botanicals |
+| `04-copilot-image-prompts.md` | Copilot Creator prompts for generating botanical assets |
+| `05-swish-qr-integration.md` | Swish QR code API research, deep-link format, implementation plan for gift section |
 
 ---
 
