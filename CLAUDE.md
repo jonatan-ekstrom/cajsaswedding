@@ -62,7 +62,7 @@ The couple does **not** want traditional gifts. Instead, they want guests to con
 
 ## Design Direction
 
-The design should match the physical invitations (photos in `tmp/` folder):
+The design should match the physical invitations (photos in `scratchpad/reference_photos/`):
 
 - **Style:** Elegant, botanical, romantic
 - **Color palette:**
@@ -91,8 +91,8 @@ wedding/
 │   ├── images/       # Wedding photos, venue photos
 │   ├── icons/        # Swish logo, QR codes, etc.
 │   └── fonts/        # Custom fonts if needed
-└── tmp/              # Reference material (not deployed)
-    └── *.jpg         # Invitation photos for design reference
+└── scratchpad/              # Reference material (not deployed, gitignored)
+    └── reference_photos/    # Invitation photos for design reference
 ```
 
 ## Agent Guidelines
@@ -145,7 +145,7 @@ Detailed design research is in the `research/` folder (not deployed):
 
 ## Notes
 
-- The `tmp/` folder contains reference photos of the physical invitations — do NOT deploy these
+- The `scratchpad/` folder is gitignored; `scratchpad/reference_photos/` contains photos of the physical invitations
 - The `research/` folder contains design research — do NOT deploy
 - RSVP is handled via email (filipcajsa2026@gmail.com), not on the website
 - The toastmasters are the contact for speeches/entertainment (tal/spex)
