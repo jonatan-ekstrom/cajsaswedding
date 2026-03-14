@@ -120,8 +120,32 @@ The following content is TBD and should use clear placeholders:
 - [ ] Additional FAQ items
 - [ ] Custom domain configuration
 
+## Design Research
+
+Detailed design research is in the `research/` folder (not deployed):
+
+- `research/00-index.md` — Summary, reconciled decisions, implementation checklist
+- `research/01-scandinavian-trends.md` — Nordic design patterns, section layout guidance
+- `research/02-tech-stack.md` — CSS, animations, fonts, assets, components
+- `research/03-botanical-web-design.md` — Color palette, botanical CSS, hero design, accessibility
+
+### Key Decisions (from research)
+
+| Decision | Choice |
+|----------|--------|
+| CSS | Custom (no framework) |
+| Animations | AOS 2.3.4 via CDN, subtle fade-up |
+| Script font | Alex Brush (Google Fonts) |
+| Heading font | Cormorant Garamond + Cormorant SC |
+| Body font | Montserrat (300, 400, 500) |
+| Botanical assets | PNG/WebP from free sources (Freepik, Pixabay, rawpixel) |
+| Maps | Google Maps links + optional OpenStreetMap embed |
+| FAQ | `<details>`/`<summary>` (no JS) |
+| Photo gallery | Integrated as ambient imagery, not standalone section |
+
 ## Notes
 
 - The `tmp/` folder contains reference photos of the physical invitations — do NOT deploy these
+- The `research/` folder contains design research — do NOT deploy
 - RSVP is handled via email (filipcajsa2026@gmail.com), not on the website
 - The toastmasters are the contact for speeches/entertainment (tal/spex)
