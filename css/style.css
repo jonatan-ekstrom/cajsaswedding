@@ -256,7 +256,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 .nav-logo {
@@ -1245,7 +1245,7 @@ summary:focus-visible {
 /* Tablet+ */
 @media (min-width: 768px) {
   .nav {
-    padding: 1.25rem 2rem;
+    padding: 0.6rem 2rem;
   }
 }
 
