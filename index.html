@@ -85,15 +85,6 @@
       </div>
     </section>
 
-    <!-- Leaf divider -->
-    <svg class="leaf-divider" viewBox="0 0 400 30" role="presentation" aria-hidden="true">
-      <line x1="20" y1="15" x2="175" y2="15" stroke="#B5C4A5" stroke-width="0.5"/>
-      <ellipse cx="200" cy="15" rx="12" ry="6" fill="#8FA07C" opacity="0.6" transform="rotate(-30 200 15)"/>
-      <ellipse cx="200" cy="15" rx="12" ry="6" fill="#8FA07C" opacity="0.4" transform="rotate(30 200 15)"/>
-      <circle cx="200" cy="15" r="2" fill="#6B8BA4" opacity="0.5"/>
-      <line x1="225" y1="15" x2="380" y2="15" stroke="#B5C4A5" stroke-width="0.5"/>
-    </svg>
-
     <!-- ===== BRÖLLOPSDAG ===== -->
     <section class="section section--cream" id="brollopsdag">
       <img src="assets/images/botanicals/eucalyptus-leaves.png"
@@ -137,7 +128,7 @@
     </section>
 
     <!-- Wave divider: cream → sage-tint -->
-    <div class="section-divider" role="presentation" aria-hidden="true">
+    <div class="section-divider section-divider--cream" role="presentation" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
         <path d="M0,30 C240,50 480,10 720,30 C960,50 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--sage-tint)"/>
       </svg>
@@ -214,14 +205,12 @@
       </div>
     </section>
 
-    <!-- Leaf divider -->
-    <svg class="leaf-divider" viewBox="0 0 400 30" role="presentation" aria-hidden="true">
-      <line x1="20" y1="15" x2="175" y2="15" stroke="#B5C4A5" stroke-width="0.5"/>
-      <ellipse cx="200" cy="15" rx="12" ry="6" fill="#8FA07C" opacity="0.6" transform="rotate(-30 200 15)"/>
-      <ellipse cx="200" cy="15" rx="12" ry="6" fill="#8FA07C" opacity="0.4" transform="rotate(30 200 15)"/>
-      <circle cx="200" cy="15" r="2" fill="#6B8BA4" opacity="0.5"/>
-      <line x1="225" y1="15" x2="380" y2="15" stroke="#B5C4A5" stroke-width="0.5"/>
-    </svg>
+    <!-- Wave divider: boende → gåvor -->
+    <div class="section-divider section-divider--cream" role="presentation" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,30 C240,50 480,10 720,30 C960,50 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--cream-warm)"/>
+      </svg>
+    </div>
 
     <!-- ===== GÅVOR ===== -->
     <section class="section section--warm" id="gavor">
@@ -262,7 +251,7 @@
     </section>
 
     <!-- Wave divider: warm → sage-tint -->
-    <div class="section-divider" role="presentation" aria-hidden="true">
+    <div class="section-divider section-divider--warm" role="presentation" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
         <path d="M0,30 C240,50 480,10 720,30 C960,50 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--sage-tint)"/>
       </svg>
@@ -334,6 +323,13 @@
     </section>
 
   </main>
+
+  <!-- Wave divider: faq → footer -->
+  <div class="section-divider section-divider--sage" role="presentation" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path d="M0,30 C240,50 480,10 720,30 C960,50 1200,10 1440,30 L1440,60 L0,60 Z" fill="var(--sage-darkest)"/>
+    </svg>
+  </div>
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
