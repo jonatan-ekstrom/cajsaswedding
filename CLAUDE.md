@@ -43,7 +43,7 @@ The site should include the following sections (single-page layout or minimal na
 
 1. **Hero / Landing** — Names, date, countdown timer
 2. **Bröllopsdag (Schedule/Program)** — Timeline of the day (placeholder content for now)
-3. **Plats & Hitta hit (Venue & Getting there)** — Ceremony and reception locations, map, parking/transport info (placeholder details for now)
+3. **Plats & Hitta hit (Venue & Getting there)** — Ceremony and reception locations, map
 4. **Boende (Accommodation)** — Info about Teleborgs Slott rooms + potentially other hotel tips
 5. **Gåvor / Bröllopsgåva (Gifts)** — **This is the primary reason for the website** (see below)
 6. **Bildgalleri (Photo gallery)** — Placeholder section for engagement/couple photos
@@ -114,7 +114,6 @@ wedding/
 
 The following content is TBD and should use clear placeholders:
 - [ ] Day's schedule/program details
-- [ ] Parking and transport information
 - [ ] Swish QR codes and numbers for toastmasters
 - [ ] Couple photos for the gallery
 - [ ] Additional FAQ items
