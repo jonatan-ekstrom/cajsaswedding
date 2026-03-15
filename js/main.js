@@ -7,11 +7,13 @@
 
   /* --- Countdown Timer --- */
   function initCountdown() {
-    const weddingDate = new Date('2026-05-23T16:00:00+02:00');
+    const weddingDate = new Date(2026, 4, 23, 16, 0, 0);
 
     function update() {
       const now = new Date();
-      const diff = weddingDate - now;
+      /* Use wall-clock diff so DST shift doesn't confuse the countdown */
+      const dstOffset = (now.getTimezoneOffset() - weddingDate.getTimezoneOffset()) * 60000;
+      const diff = weddingDate - now + dstOffset;
 
       if (diff <= 0) {
         const el = document.querySelector('.countdown');
