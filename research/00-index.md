@@ -142,7 +142,7 @@ wedding/
 
 ### Phase 7: Content Enhancements (March 2025)
 - [ ] Couple quote — styled personal message between hero and Bröllopsdagen
-- [ ] Plats — richer venue descriptions (atmosphere, couple's connection to venues)
+- [x] Plats — richer venue descriptions (atmosphere, couple's connection to venues)
 - [ ] Dela era bilder — new photo sharing section with Google Photos album QR code + unplugged ceremony note
 - [ ] FAQ additions: mobilfri vigsel, andra hotell i Växjö, +1 policy
 - [ ] Nav update — add "Bilder" link for the new photo sharing section
@@ -180,7 +180,7 @@ wedding/
 - [ ] Couple photos for ambient imagery
 - [ ] Custom domain configuration
 - [ ] Alternative hotel details for Växjö (verify recommendations)
-- [ ] Gårdsby kyrka — couple's connection to the church (for richer venue description)
+- [x] Gårdsby kyrka — couple's connection to the church (for richer venue description)
 
 ## Decisions Log (March 2025 Content Review)
 

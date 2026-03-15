@@ -120,7 +120,7 @@ The following content is TBD and should use clear placeholders:
 - [ ] Couple quote text — draft provided, needs Cajsa & Filip's personalization
 - [ ] Google Photos album link + QR code for photo sharing section
 - [ ] Couple photos for ambient imagery
-- [ ] Gårdsby kyrka — couple's connection to the church (for venue description)
+- [x] Gårdsby kyrka — couple's connection to the church (for venue description)
 - [ ] Alternative hotel names for Växjö FAQ (verify recommendations)
 - [ ] Custom domain configuration
 
