@@ -201,6 +201,15 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
 }
 
+/* Orphan prevention (progressive enhancement) */
+h1, h2, h3, .section-subtitle {
+  text-wrap: balance;
+}
+
+p, li, summary {
+  text-wrap: pretty;
+}
+
 .section-heading {
   font-family: var(--font-heading);
   font-size: var(--text-3xl);
@@ -1009,7 +1018,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-light);
-  text-align: center;
+  text-align: left;
 }
 
 .photo-share-message {
@@ -1042,8 +1051,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .photo-share-link {
-  display: inline-block;
-  margin-top: 1.25rem;
+  display: block;
+  width: fit-content;
+  margin: 1.25rem auto 0;
   font-family: var(--font-small-caps);
   font-size: var(--text-sm);
   font-weight: 400;
@@ -1068,7 +1078,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 2rem auto 0;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-sage);
-  text-align: center;
+  text-align: left;
 }
 
 .unplugged-note p {
