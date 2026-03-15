@@ -103,6 +103,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Hide script-font elements until Alex Brush is loaded to prevent FOUT */
+.site-header,
+.hero-names .name,
+.footer-names {
+  visibility: hidden;
+}
+.fonts-loaded .site-header,
+.fonts-loaded .hero-names .name,
+.fonts-loaded .footer-names {
+  visibility: visible;
+}
+
 /* Paper texture overlay — layered for premium feel */
 .paper-texture::before {
   content: '';
