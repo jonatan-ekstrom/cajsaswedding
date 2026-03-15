@@ -710,17 +710,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .venue-desc {
-  font-size: var(--text-base);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
   font-style: italic;
-  color: var(--text-secondary);
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
+  font-weight: 300;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
 }
 
 .venue-detail {
+  font-family: var(--font-heading);
   font-size: var(--text-sm);
   color: var(--text-secondary);
   margin-bottom: 1.25rem;
+  line-height: 1.6;
 }
 
 .venue-note {
