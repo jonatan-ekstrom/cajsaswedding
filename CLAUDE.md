@@ -90,8 +90,11 @@ wedding/
 ├── js/
 │   └── main.js
 ├── assets/
-│   ├── images/       # Wedding photos, venue photos, florals
-│   └── icons/        # Swish logo, QR codes, etc.
+│   ├── images/
+│   │   ├── florals/    # Botanical PNG decorations
+│   │   └── photos/     # Wedding & venue photos (JPG)
+│   └── icons/
+│       └── swish/      # Swish QR codes
 └── scratchpad/              # Reference material (not deployed, gitignored)
     └── reference_photos/    # Invitation photos for design reference
 ```
