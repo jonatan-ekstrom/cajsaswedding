@@ -71,7 +71,7 @@ Add the four IPv6 addresses listed in the GitHub documentation.
 - [x] All images/fonts/CSS load (check browser devtools Network tab)
 - [x] Countdown timer works
 - [x] Swish deep links work on mobile
-- [ ] Navigation and smooth scroll work
+- [x] Navigation and smooth scroll work
 - [x] Site is responsive on mobile
 
 **After Phase 2:**
