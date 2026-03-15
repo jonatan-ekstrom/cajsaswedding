@@ -1222,18 +1222,36 @@ summary:focus-visible {
      so the full image stays inside overflow:hidden */
   .botanical-tr,
   .botanical-br {
-    width: clamp(130px, 40vw, 200px);
-    opacity: 0.55;
-    right: 0;
-    top: 0;
+    width: clamp(100px, 30vw, 160px);
+    opacity: 0.45;
+    right: -10px;
+    top: -10px;
   }
 
   .botanical-bl,
   .botanical-tl {
-    width: clamp(100px, 35vw, 180px);
-    opacity: 0.45;
-    left: 0;
-    bottom: 0;
+    width: clamp(80px, 25vw, 140px);
+    opacity: 0.35;
+    left: -10px;
+    bottom: -10px;
+  }
+
+  /* Cancel rotation on mobile — rotated botanicals extend into content */
+  .botanical-rotate {
+    transform: none;
+  }
+
+  /* Hero botanicals — larger and more visible than other sections */
+  .hero .botanical-tr,
+  .hero .botanical-br {
+    width: clamp(130px, 38vw, 190px);
+    opacity: 0.6;
+  }
+
+  .hero .botanical-bl,
+  .hero .botanical-tl {
+    width: clamp(110px, 32vw, 170px);
+    opacity: 0.5;
   }
 
   .countdown-wreath {
@@ -1279,14 +1297,26 @@ summary:focus-visible {
 @media (max-width: 479px) {
   .botanical-tr,
   .botanical-br {
-    width: 120px;
-    opacity: 0.45;
+    width: 90px;
+    opacity: 0.35;
   }
 
   .botanical-bl,
   .botanical-tl {
+    width: 75px;
+    opacity: 0.28;
+  }
+
+  .hero .botanical-tr,
+  .hero .botanical-br {
+    width: 120px;
+    opacity: 0.5;
+  }
+
+  .hero .botanical-bl,
+  .hero .botanical-tl {
     width: 100px;
-    opacity: 0.35;
+    opacity: 0.4;
   }
 
   .countdown-wreath {
