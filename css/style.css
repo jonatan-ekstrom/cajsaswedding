@@ -927,6 +927,77 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.05em;
 }
 
+/* Photo Sharing */
+.photo-share-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2.5rem clamp(1.5rem, 5vw, 3rem);
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-light);
+}
+
+.photo-share-message {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.photo-share-instruction {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.photo-share-qr {
+  display: flex;
+  justify-content: center;
+}
+
+.qr-placeholder {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--sage-tint);
+  border: 2px dashed var(--border-sage);
+  border-radius: 8px;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-align: center;
+  padding: 1rem;
+}
+
+.qr-placeholder-icon {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.unplugged-note {
+  max-width: 500px;
+  margin: 2rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-sage);
+  text-align: center;
+}
+
+.unplugged-note p {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--sage-darkest);
+  line-height: 1.7;
+}
+
 /* FAQ */
 .faq-list {
   max-width: 650px;
@@ -1341,6 +1412,11 @@ summary:focus-visible {
   }
 
   .swish-qr {
+    width: 160px;
+    height: 160px;
+  }
+
+  .qr-placeholder {
     width: 160px;
     height: 160px;
   }

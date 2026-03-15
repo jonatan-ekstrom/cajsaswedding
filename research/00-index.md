@@ -143,9 +143,9 @@ wedding/
 ### Phase 7: Content Enhancements (March 2025)
 - [ ] Couple quote — styled personal message between hero and Bröllopsdagen
 - [x] Plats — richer venue descriptions (atmosphere, couple's connection to venues)
-- [ ] Dela era bilder — new photo sharing section with Google Photos album QR code + unplugged ceremony note
+- [x] Dela era bilder — new photo sharing section with Google Photos album QR code + unplugged ceremony note
 - [ ] FAQ additions: mobilfri vigsel, andra hotell i Växjö, +1 policy
-- [ ] Nav update — add "Bilder" link for the new photo sharing section
+- [x] Nav update — add "Bilder" link for the new photo sharing section
 
 ### Phase 4: Navigation
 - [ ] Sticky nav (transparent → solid on scroll)
