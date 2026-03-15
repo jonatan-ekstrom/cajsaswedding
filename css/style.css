@@ -50,7 +50,7 @@
 
   /* Glassmorphism */
   --glass-bg: rgba(250, 248, 245, 0.55);
-  --glass-bg-mobile: rgba(250, 248, 245, 0.6);
+  --glass-bg-mobile: rgba(250, 248, 245, 0.82);
   --glass-blur: blur(16px) saturate(1.4);
 
   /* Fonts */
