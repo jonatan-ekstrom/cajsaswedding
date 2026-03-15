@@ -8,13 +8,13 @@
 - **Review URL:** https://jonatan-ekstrom.github.io/cajsaswedding/
 - **Custom domain:** TBD (will be configured via Loopia after review)
 
-## Phase 1: GitHub Pages Setup
+## Phase 1: GitHub Pages Setup ✅ DONE (2026-03-15)
 
-1. Create repo on GitHub: `jonatan-ekstrom/cajsaswedding` (public)
-2. Add remote: `git remote add origin https://github.com/jonatan-ekstrom/cajsaswedding.git`
-3. Push: `git push -u origin master`
-4. Enable Pages: Settings → Pages → Source: Deploy from branch → `master` / root → Save
-5. Verify at: `https://jonatan-ekstrom.github.io/cajsaswedding/`
+1. ~~Create repo on GitHub: `jonatan-ekstrom/cajsaswedding` (public)~~
+2. ~~Add remote: `git remote set-url origin git@github.com:jonatan-ekstrom/cajsaswedding.git` (SSH)~~
+3. ~~Push: `git push -u origin master`~~
+4. ~~Enable Pages: Settings → Pages → Source: Deploy from branch → `master` / root → Save~~
+5. ~~Verify at: `https://jonatan-ekstrom.github.io/cajsaswedding/`~~
 
 **Push updates:**
 ```bash
@@ -66,13 +66,13 @@ Add the four IPv6 addresses listed in the GitHub documentation.
 
 ## Verification Checklist
 
-**After Phase 1:**
-- [ ] Site loads at `https://jonatan-ekstrom.github.io/cajsaswedding/`
-- [ ] All images/fonts/CSS load (check browser devtools Network tab)
-- [ ] Countdown timer works
-- [ ] Swish deep links work on mobile
+**After Phase 1:** ✅ (2026-03-15)
+- [x] Site loads at `https://jonatan-ekstrom.github.io/cajsaswedding/`
+- [x] All images/fonts/CSS load (check browser devtools Network tab)
+- [x] Countdown timer works
+- [x] Swish deep links work on mobile
 - [ ] Navigation and smooth scroll work
-- [ ] Site is responsive on mobile
+- [x] Site is responsive on mobile
 
 **After Phase 2:**
 - [ ] `dig yourdomain.se` returns GitHub's A record IPs
