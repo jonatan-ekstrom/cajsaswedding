@@ -96,7 +96,7 @@
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
     AOS.init({
-      duration: 800,
+      duration: 600,
       easing: 'ease-out-cubic',
       once: true,
       offset: 50

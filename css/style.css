@@ -97,6 +97,11 @@ html::-webkit-scrollbar {
   display: none;                    /* Chrome, Safari, Edge */
 }
 
+/* Prevent scroll anchoring from fighting AOS layout shifts */
+[data-aos] {
+  overflow-anchor: none;
+}
+
 body {
   font-family: var(--font-body);
   font-weight: 400;
@@ -1267,15 +1272,15 @@ p, li, summary {
 
 /* --- 10. Animations --- */
 @media (prefers-reduced-motion: no-preference) {
-  .hero-pretext { animation: fadeUp 0.8s ease-out 0.3s both; }
-  .hero-names .name:first-child { animation: fadeUp 0.8s ease-out 0.5s both; }
-  .hero-names .ampersand { animation: fadeUp 0.6s ease-out 0.7s both; }
-  .hero-names .name:last-child { animation: fadeUp 0.8s ease-out 0.8s both; }
-  .hero-date { animation: fadeUp 0.8s ease-out 1.1s both; }
-  .countdown-wrapper { animation: fadeUp 0.8s ease-out 1.4s both; }
+  .hero-pretext { animation: fadeUp 0.5s ease-out 0.15s both; }
+  .hero-names .name:first-child { animation: fadeUp 0.5s ease-out 0.25s both; }
+  .hero-names .ampersand { animation: fadeUp 0.4s ease-out 0.35s both; }
+  .hero-names .name:last-child { animation: fadeUp 0.5s ease-out 0.4s both; }
+  .hero-date { animation: fadeUp 0.5s ease-out 0.55s both; }
+  .countdown-wrapper { animation: fadeUp 0.5s ease-out 0.7s both; }
 
-  .hero > .botanical-tr { animation: fadeSlideIn 1.2s ease-out 0.2s both; }
-  .hero > .botanical-bl { animation: fadeSlideInFlipY 1.2s ease-out 0.5s both; }
+  .hero > .botanical-tr { animation: fadeSlideIn 0.8s ease-out 0.1s both; }
+  .hero > .botanical-bl { animation: fadeSlideInFlipY 0.8s ease-out 0.25s both; }
 }
 
 @keyframes fadeUp {
