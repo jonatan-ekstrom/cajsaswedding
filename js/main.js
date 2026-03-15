@@ -68,6 +68,26 @@
     });
   }
 
+  /* --- FAQ scroll-position fix --- */
+  // When a <details> toggles open/closed the page height changes and the
+  // browser's scroll-anchoring can shift the viewport, making it look like
+  // the answer expands "upward". We counteract this by pinning the clicked
+  // <summary> to its viewport position across the toggle.
+  function initFaqScrollFix() {
+    document.querySelectorAll('.faq-question').forEach(function (summary) {
+      summary.addEventListener('click', function () {
+        var topBefore = summary.getBoundingClientRect().top;
+        requestAnimationFrame(function () {
+          var topAfter = summary.getBoundingClientRect().top;
+          var drift = topAfter - topBefore;
+          if (drift) {
+            window.scrollBy({ top: drift, behavior: 'instant' });
+          }
+        });
+      });
+    });
+  }
+
   /* --- AOS Init --- */
   function initAOS() {
     if (typeof AOS === 'undefined') return;
@@ -79,6 +99,7 @@
       once: true,
       offset: 50
     });
+
   }
 
   /* --- Boot --- */
@@ -86,6 +107,7 @@
     initCountdown();
     initNavScroll();
     initMobileNav();
+    initFaqScrollFix();
     initAOS();
   });
 })();
