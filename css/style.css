@@ -1009,6 +1009,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-light);
+  text-align: center;
 }
 
 .photo-share-message {
@@ -1034,26 +1035,32 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
-.qr-placeholder {
+.photo-share-qr-img {
   width: 160px;
   height: 160px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background: var(--sage-tint);
-  border: 2px dashed var(--border-sage);
   border-radius: 8px;
-  font-size: var(--text-xs);
-  color: var(--text-muted);
-  text-align: center;
-  padding: 1rem;
 }
 
-.qr-placeholder-icon {
-  font-size: 2rem;
-  opacity: 0.5;
+.photo-share-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-family: var(--font-small-caps);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  padding: 0.65rem 2rem;
+  background-color: var(--sage-darkest);
+  color: var(--text-on-dark);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.photo-share-link:hover {
+  background-color: var(--hover-sage);
+  color: var(--white);
 }
 
 .unplugged-note {
@@ -1386,7 +1393,7 @@ summary:focus-visible {
     height: 200px;
   }
 
-  .qr-placeholder {
+  .photo-share-qr-img {
     width: 200px;
     height: 200px;
   }
