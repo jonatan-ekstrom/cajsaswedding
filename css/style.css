@@ -548,6 +548,41 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- 8. Components --- */
 
+/* Day layout — photo + timeline side by side */
+.day-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Couple portrait */
+.couple-portrait {
+  margin: 0;
+}
+
+.couple-portrait-frame {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-light);
+}
+
+.couple-portrait-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Sage duotone: shift B&W into the sage/cream palette */
+  filter: sepia(0.15) hue-rotate(50deg) saturate(0.75) brightness(1.05) contrast(0.95);
+}
+
+.day-layout .timeline {
+  margin: 0;
+}
+
 /* Timeline */
 .timeline {
   max-width: 500px;
@@ -876,6 +911,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-item {
   border-bottom: 1px solid var(--border-sage);
+  overflow-anchor: none;
 }
 
 .faq-item:first-child {
@@ -1189,6 +1225,16 @@ summary:focus-visible {
     width: clamp(180px, 65vw, 400px);
   }
 
+  /* Couple portrait — center and constrain on mobile */
+  .couple-portrait-frame {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .day-layout .timeline {
+    margin: 0 auto;
+  }
+
   /* Timeline adjust */
   .timeline::before {
     left: 55px;
@@ -1260,11 +1306,22 @@ summary:focus-visible {
   .nav {
     padding: 0.6rem 2rem;
   }
+
+  .day-layout {
+    grid-template-columns: 5fr 6fr;
+    gap: 3rem;
+    max-width: none;
+    align-items: center;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
   .section-content {
     max-width: min(90%, 900px);
+  }
+
+  .section-content--wide {
+    max-width: min(90%, 1060px);
   }
 }
