@@ -32,9 +32,16 @@
     <nav class="nav" aria-label="Huvudnavigation">
       <a href="#hero" class="nav-logo">C <span class="nav-amp">&amp;</span> F</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Öppna meny">
-        <span class="nav-toggle-line"></span>
-        <span class="nav-toggle-line"></span>
-        <span class="nav-toggle-line"></span>
+        <svg class="nav-leaf" width="32" height="32" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Eucalyptus leaf -->
+          <path d="M14 3C10.5 6 6 11 5.5 16.5C5 22 9 25.5 14 25.5C19 25.5 23 22 22.5 16.5C22 11 17.5 6 14 3Z" fill="var(--sage)" opacity="0.85"/>
+          <!-- Leaf vein (midrib) -->
+          <path d="M14 5.5V23" stroke="var(--sage-darkest)" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+          <!-- Side veins -->
+          <path d="M14 9L10 12M14 12.5L9 15.5M14 16L9.5 18.5M14 9L18 12M14 12.5L19 15.5M14 16L18.5 18.5" stroke="var(--sage-darkest)" stroke-width="0.5" stroke-linecap="round" opacity="0.35"/>
+          <!-- Stem -->
+          <path d="M14 25.5C14 25.5 13.5 27 13 28" stroke="var(--sage-dark)" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+        </svg>
       </button>
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#brollopsdag">Bröllopsdagen</a></li>

@@ -324,7 +324,7 @@ p, li, summary {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0;
 }
 
@@ -353,32 +353,40 @@ p, li, summary {
 
 .nav-toggle {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
 }
 
-.nav-toggle-line {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background-color: var(--text-primary);
-  border-radius: 1px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.nav-toggle:active {
+  transform: scale(0.92);
+  transition: transform 80ms ease-out;
 }
 
-/* Hamburger animation */
-.nav-toggle[aria-expanded="true"] .nav-toggle-line:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.nav-leaf {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.5s ease;
+  transform-origin: center center;
+  filter: drop-shadow(0 1px 2px rgba(92, 107, 79, 0.15));
 }
-.nav-toggle[aria-expanded="true"] .nav-toggle-line:nth-child(2) {
-  opacity: 0;
+
+/* Leaf turns when menu opens */
+.nav-toggle[aria-expanded="true"] .nav-leaf {
+  transform: rotate(180deg);
+  filter: drop-shadow(0 1px 3px rgba(92, 107, 79, 0.25));
 }
-.nav-toggle[aria-expanded="true"] .nav-toggle-line:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+
+/* Subtle hover sway */
+@media (prefers-reduced-motion: no-preference) {
+  .nav-toggle:hover .nav-leaf {
+    transform: rotate(15deg);
+  }
+  .nav-toggle[aria-expanded="true"]:hover .nav-leaf {
+    transform: rotate(195deg);
+  }
 }
 
 
@@ -1281,6 +1289,8 @@ p, li, summary {
 
   .hero > .botanical-tr { animation: fadeSlideIn 0.8s ease-out 0.1s both; }
   .hero > .botanical-bl { animation: fadeSlideInFlipY 0.8s ease-out 0.25s both; }
+
+  .nav-leaf { animation: leafSway 1s cubic-bezier(0.4, 0, 0.2, 1) 1.5s backwards; }
 }
 
 @keyframes fadeUp {
@@ -1296,6 +1306,15 @@ p, li, summary {
 @keyframes fadeSlideInFlipY {
   from { opacity: 0; transform: scaleY(-1) translateY(15px) scale(0.97); }
   to { transform: scaleY(-1) translateY(0) scale(1); }
+}
+
+@keyframes leafSway {
+  0%   { transform: rotate(0deg); }
+  20%  { transform: rotate(12deg); }
+  45%  { transform: rotate(-8deg); }
+  65%  { transform: rotate(5deg); }
+  82%  { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
 }
 
 

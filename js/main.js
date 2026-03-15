@@ -50,7 +50,7 @@
     }, { passive: true });
   }
 
-  /* --- Mobile Hamburger --- */
+  /* --- Mobile Nav (leaf toggle) --- */
   function initMobileNav() {
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.getElementById('nav-menu');
