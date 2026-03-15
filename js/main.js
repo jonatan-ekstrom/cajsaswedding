@@ -76,10 +76,10 @@
   function initFaqScrollFix() {
     document.querySelectorAll('.faq-question').forEach(function (summary) {
       summary.addEventListener('click', function () {
-        var topBefore = summary.getBoundingClientRect().top;
+        const topBefore = summary.getBoundingClientRect().top;
         requestAnimationFrame(function () {
-          var topAfter = summary.getBoundingClientRect().top;
-          var drift = topAfter - topBefore;
+          const topAfter = summary.getBoundingClientRect().top;
+          const drift = topAfter - topBefore;
           if (drift) {
             window.scrollBy({ top: drift, behavior: 'instant' });
           }
@@ -91,7 +91,7 @@
   /* --- AOS Init --- */
   function initAOS() {
     if (typeof AOS === 'undefined') return;
-    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;
     AOS.init({
       duration: 800,

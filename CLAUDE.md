@@ -90,9 +90,8 @@ wedding/
 ├── js/
 │   └── main.js
 ├── assets/
-│   ├── images/       # Wedding photos, venue photos
-│   ├── icons/        # Swish logo, QR codes, etc.
-│   └── fonts/        # Custom fonts if needed
+│   ├── images/       # Wedding photos, venue photos, florals
+│   └── icons/        # Swish logo, QR codes, etc.
 └── scratchpad/              # Reference material (not deployed, gitignored)
     └── reference_photos/    # Invitation photos for design reference
 ```
@@ -147,6 +146,9 @@ Detailed design research is in the `research/` folder (not deployed):
 | FAQ | `<details>`/`<summary>` (no JS) |
 | Couple/venue photos | Integrated as ambient imagery, not standalone section |
 | Guest photo sharing | Standalone "Dela era bilder" section with Google Photos QR code |
+| CSS approach | Mobile-first (`min-width` queries only) |
+| Breakpoints | 480px (medium mobile), 768px (tablet layout + botanicals), 1024px (desktop nav + full botanicals) |
+| Desktop nav | Horizontal links at 1024px+; hamburger menu below (6 Swedish labels don't fit at 768px) |
 
 ## Logistics Decisions (March 2025)
 

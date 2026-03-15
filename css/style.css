@@ -18,21 +18,15 @@
   --blue: #6B8BA4;
   --blue-medium: #8BA4B8;
   --blue-light: #A8BFD0;
-  --blue-lightest: #D0DEE8;
   --blue-tint: #E8EFF4;
 
   /* Accent: Warm Gold / Dark Olive */
   --gold: #B8A06A;
-  --gold-dark: #97834D;
-  --gold-light: #D4C494;
-  --olive-accent: #6B6B3E;
 
   /* Neutrals */
   --white: #FFFFFF;
   --cream: #FAF8F5;
   --cream-warm: #F5F0E8;
-  --ivory: #F0EBE1;
-  --linen: #E8E2D8;
 
   /* Text */
   --text-primary: #2C2C2C;
@@ -53,6 +47,11 @@
   --border-light: rgba(44, 44, 44, 0.08);
   --border-sage: rgba(143, 160, 124, 0.3);
   --border-gold: rgba(184, 160, 106, 0.3);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(250, 248, 245, 0.55);
+  --glass-bg-mobile: rgba(250, 248, 245, 0.6);
+  --glass-blur: blur(16px) saturate(1.4);
 
   /* Fonts */
   --font-script: 'Alex Brush', cursive;
@@ -261,9 +260,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-header.scrolled {
-  background-color: rgba(250, 248, 245, 0.55);
-  backdrop-filter: blur(16px) saturate(1.4);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.4) inset;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -297,12 +296,36 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu {
   display: flex;
-  gap: 2rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  background-color: var(--glass-bg-mobile);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0;
+}
+
+.nav-menu.open {
+  max-height: 400px;
+  padding: 1rem 0;
+}
+
+.nav-menu li {
+  padding: 0.75rem 0;
 }
 
 .nav-menu a {
   font-family: var(--font-small-caps);
-  font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.4rem);
+  font-size: var(--text-base);
   font-weight: 400;
   letter-spacing: 0.08em;
   color: var(--text-secondary);
@@ -315,7 +338,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-toggle {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -355,8 +378,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--cream);
   padding: 2rem;
 }
-
-/* Reserved for hero overlay if needed */
 
 .hero-content {
   position: relative;
@@ -420,9 +441,9 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: clamp(260px, 45vw, 400px);
+  width: 200px;
   height: auto;
-  opacity: 0.45;
+  opacity: 0.3;
   pointer-events: none;
   z-index: 0;
 }
@@ -463,7 +484,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .countdown-separator {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: 1.2rem;
   color: var(--sage-light);
   align-self: flex-start;
   margin-top: 0.15em;
@@ -488,46 +509,33 @@ h1, h2, h3, h4, h5, h6 {
   mask-image: radial-gradient(ellipse 80% 80% at center, black 40%, transparent 100%);
 }
 
+/* Position + small-mobile sizing (base = smallest breakpoint) */
 .botanical-tr {
-  top: -30px;
-  right: -40px;
-  width: clamp(200px, 35vw, 450px);
-  opacity: 0.85;
+  top: -10px;
+  right: -10px;
+  width: 90px;
+  opacity: 0.35;
 }
 
 .botanical-bl {
-  bottom: -30px;
-  left: -40px;
-  width: clamp(180px, 30vw, 400px);
-  opacity: 0.8;
-}
-
-.botanical-small {
-  width: clamp(120px, 20vw, 250px);
-  opacity: 0.6;
-}
-
-.botanical-medium {
-  width: clamp(160px, 28vw, 350px);
-  opacity: 0.65;
-}
-
-.botanical-faded {
-  opacity: 0.45;
+  bottom: -10px;
+  left: -10px;
+  width: 75px;
+  opacity: 0.28;
 }
 
 .botanical-tl {
-  top: -20px;
-  left: -30px;
-  width: clamp(140px, 22vw, 280px);
-  opacity: 0.5;
+  bottom: -10px;
+  left: -10px;
+  width: 75px;
+  opacity: 0.28;
 }
 
 .botanical-br {
-  bottom: -20px;
-  right: -30px;
-  width: clamp(140px, 22vw, 280px);
-  opacity: 0.5;
+  top: -10px;
+  right: -10px;
+  width: 90px;
+  opacity: 0.35;
 }
 
 .botanical-mirror {
@@ -542,8 +550,20 @@ h1, h2, h3, h4, h5, h6 {
   transform: scaleX(-1) scaleY(-1);
 }
 
+/* Cancel rotation on mobile — rotated botanicals extend into content */
 .botanical-rotate {
-  transform: rotate(15deg);
+  transform: none;
+}
+
+/* Hero botanicals — larger and more visible than other sections on mobile */
+.hero .botanical-tr {
+  width: 120px;
+  opacity: 0.5;
+}
+
+.hero .botanical-bl {
+  width: 100px;
+  opacity: 0.4;
 }
 
 /* Inline botanical — centered, in-flow decorative images (garlands, horizontal elements) */
@@ -551,18 +571,15 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   margin: 0 auto;
   pointer-events: none;
-  width: clamp(200px, 50vw, 450px);
+  width: 150px;
   height: auto;
-  opacity: 0.35;
+  opacity: 0.2;
   object-fit: contain;
 }
 
 .botanical-inline--wide {
-  width: clamp(250px, 70vw, 600px);
+  width: clamp(140px, 60vw, 280px);
 }
-
-/* Gåvor section — larger corners need more offset to hide image edges */
-
 
 /* --- 8. Components --- */
 
@@ -587,6 +604,8 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   box-shadow: var(--shadow-soft);
   border: 1px solid var(--border-light);
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .couple-portrait-img {
@@ -612,7 +631,7 @@ h1, h2, h3, h4, h5, h6 {
 .timeline::before {
   content: '';
   position: absolute;
-  left: 80px;
+  left: 55px;
   top: 0;
   bottom: 0;
   width: 1px;
@@ -630,7 +649,7 @@ h1, h2, h3, h4, h5, h6 {
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: 76px;
+  left: 51px;
   top: 50%;
   transform: translateY(-50%);
   width: 9px;
@@ -642,10 +661,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .timeline-time {
   font-family: var(--font-heading);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   font-weight: 500;
   color: var(--sage-darkest);
-  min-width: 65px;
+  min-width: 42px;
   text-align: right;
 }
 
@@ -660,7 +679,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Venue Cards */
 .venue-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -736,12 +755,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
   margin-bottom: 1.25rem;
   line-height: 1.6;
-}
-
-.venue-note {
-  text-align: center;
-  font-size: var(--text-sm);
-  color: var(--text-muted);
 }
 
 /* Button */
@@ -874,7 +887,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .swish-contacts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
@@ -886,8 +899,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .swish-qr {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto 1rem;
   background: var(--white);
   border-radius: 8px;
@@ -983,8 +996,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .qr-placeholder {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1103,10 +1116,6 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-.section-divider--flip {
-  background-color: var(--sage-tint);
-}
-
 .section-divider--cream {
   background-color: var(--cream);
 }
@@ -1156,10 +1165,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-contacts {
   display: flex;
-  justify-content: center;
-  gap: 3rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
-  flex-wrap: wrap;
+  font-style: normal;
 }
 
 .footer-contact {
@@ -1282,76 +1292,26 @@ summary:focus-visible {
 
 /* --- 12. Responsive --- */
 
-/* Mobile: < 768px */
-@media (max-width: 767px) {
-  .nav-toggle {
-    display: flex;
-  }
-
-  .nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    background-color: rgba(250, 248, 245, 0.6);
-    backdrop-filter: blur(16px) saturate(1.4);
-    -webkit-backdrop-filter: blur(16px) saturate(1.4);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-    padding: 0;
-  }
-
-  .nav-menu.open {
-    max-height: 400px;
-    padding: 1rem 0;
-  }
-
-  .nav-menu li {
-    padding: 0.75rem 0;
-  }
-
-  .nav-menu a {
-    font-size: var(--text-base);
-  }
-
-  /* Botanicals — scale down on mobile; use non-negative offsets
-     so the full image stays inside overflow:hidden */
+/* Medium mobile+ */
+@media (min-width: 480px) {
   .botanical-tr,
   .botanical-br {
     width: clamp(100px, 30vw, 160px);
     opacity: 0.45;
-    right: -10px;
-    top: -10px;
   }
 
   .botanical-bl,
   .botanical-tl {
     width: clamp(80px, 25vw, 140px);
     opacity: 0.35;
-    left: -10px;
-    bottom: -10px;
   }
 
-  /* Cancel rotation on mobile — rotated botanicals extend into content */
-  .botanical-rotate {
-    transform: none;
-  }
-
-  /* Hero botanicals — larger and more visible than other sections */
-  .hero .botanical-tr,
-  .hero .botanical-br {
+  .hero .botanical-tr {
     width: clamp(130px, 38vw, 190px);
     opacity: 0.6;
   }
 
-  .hero .botanical-bl,
-  .hero .botanical-tl {
+  .hero .botanical-bl {
     width: clamp(110px, 32vw, 170px);
     opacity: 0.5;
   }
@@ -1359,6 +1319,10 @@ summary:focus-visible {
   .countdown-wreath {
     width: clamp(220px, 60vw, 300px);
     opacity: 0.35;
+  }
+
+  .countdown-separator {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
 
   .botanical-inline {
@@ -1370,96 +1334,28 @@ summary:focus-visible {
     width: clamp(180px, 65vw, 400px);
   }
 
-  /* Couple portrait — center and constrain on mobile */
-  .couple-portrait-frame {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  .day-layout .timeline {
-    margin: 0 auto;
-  }
-
-  /* Timeline adjust */
-  .timeline::before {
-    left: 55px;
-  }
-
-  .timeline-item::before {
-    left: 51px;
-  }
-
-  .timeline-time {
-    min-width: 42px;
-    font-size: var(--text-base);
-  }
-}
-
-/* Small mobile */
-@media (max-width: 479px) {
-  .botanical-tr,
-  .botanical-br {
-    width: 90px;
-    opacity: 0.35;
-  }
-
-  .botanical-bl,
-  .botanical-tl {
-    width: 75px;
-    opacity: 0.28;
-  }
-
-  .hero .botanical-tr,
-  .hero .botanical-br {
-    width: 120px;
-    opacity: 0.5;
-  }
-
-  .hero .botanical-bl,
-  .hero .botanical-tl {
-    width: 100px;
-    opacity: 0.4;
-  }
-
-  .countdown-wreath {
-    width: 200px;
-    opacity: 0.3;
-  }
-
-  .countdown-separator {
-    font-size: 1.2rem;
-  }
-
   .venue-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
   .swish-contacts {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   .swish-qr {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
   }
 
   .qr-placeholder {
-    width: 160px;
-    height: 160px;
-  }
-
-  .botanical-inline {
-    width: 150px;
-    opacity: 0.2;
-  }
-
-  .botanical-inline--wide {
-    width: clamp(140px, 60vw, 280px);
+    width: 200px;
+    height: 200px;
   }
 
   .footer-contacts {
-    flex-direction: column;
-    gap: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
   }
 }
 
@@ -1467,6 +1363,93 @@ summary:focus-visible {
 @media (min-width: 768px) {
   .nav {
     padding: 0.6rem 2rem;
+  }
+
+  /* Tablet botanical sizes — restore desktop positioning with moderate sizes */
+  .botanical-tr {
+    top: -20px;
+    right: -25px;
+    width: clamp(140px, 22vw, 250px);
+    opacity: 0.65;
+  }
+
+  .botanical-bl {
+    bottom: -20px;
+    left: -25px;
+    width: clamp(130px, 20vw, 220px);
+    opacity: 0.6;
+  }
+
+  .botanical-tl {
+    top: -15px;
+    bottom: auto;
+    left: -20px;
+    width: clamp(110px, 18vw, 200px);
+    opacity: 0.45;
+  }
+
+  .botanical-br {
+    top: auto;
+    bottom: -15px;
+    right: -20px;
+    width: clamp(110px, 18vw, 200px);
+    opacity: 0.45;
+  }
+
+  /* Modifiers effective at tablet+ */
+  .botanical-small {
+    width: clamp(100px, 16vw, 180px);
+    opacity: 0.5;
+  }
+
+  .botanical-faded {
+    opacity: 0.4;
+  }
+
+  .botanical-rotate {
+    transform: rotate(15deg);
+  }
+
+  .hero .botanical-tr {
+    width: clamp(160px, 25vw, 300px);
+    opacity: 0.7;
+  }
+
+  .hero .botanical-bl {
+    width: clamp(140px, 22vw, 260px);
+    opacity: 0.65;
+  }
+
+  .countdown-wreath {
+    width: clamp(240px, 35vw, 350px);
+    opacity: 0.4;
+  }
+
+  .botanical-inline {
+    width: clamp(180px, 40vw, 350px);
+    opacity: 0.3;
+  }
+
+  .botanical-inline--wide {
+    width: clamp(220px, 55vw, 450px);
+  }
+
+  .couple-portrait-frame {
+    max-width: none;
+    margin: 0;
+  }
+
+  .timeline::before {
+    left: 80px;
+  }
+
+  .timeline-item::before {
+    left: 76px;
+  }
+
+  .timeline-time {
+    min-width: 65px;
+    font-size: var(--text-lg);
   }
 
   .day-layout {
@@ -1479,6 +1462,96 @@ summary:focus-visible {
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    border-bottom: none;
+    max-height: none;
+    overflow: visible;
+    transition: none;
+    padding: 0;
+  }
+
+  .nav-menu li {
+    padding: 0;
+  }
+
+  .nav-menu a {
+    font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.4rem);
+  }
+
+  /* Full desktop botanical sizes */
+  .botanical-tr {
+    top: -30px;
+    right: -40px;
+    width: clamp(200px, 35vw, 450px);
+    opacity: 0.85;
+  }
+
+  .botanical-bl {
+    bottom: -30px;
+    left: -40px;
+    width: clamp(180px, 30vw, 400px);
+    opacity: 0.8;
+  }
+
+  .botanical-tl {
+    top: -20px;
+    left: -30px;
+    width: clamp(140px, 22vw, 280px);
+    opacity: 0.5;
+  }
+
+  .botanical-br {
+    bottom: -20px;
+    right: -30px;
+    width: clamp(140px, 22vw, 280px);
+    opacity: 0.5;
+  }
+
+  .botanical-small {
+    width: clamp(120px, 20vw, 250px);
+    opacity: 0.6;
+  }
+
+  .botanical-faded {
+    opacity: 0.45;
+  }
+
+  .hero .botanical-tr {
+    width: clamp(200px, 35vw, 450px);
+    opacity: 0.85;
+  }
+
+  .hero .botanical-bl {
+    width: clamp(180px, 30vw, 400px);
+    opacity: 0.8;
+  }
+
+  .countdown-wreath {
+    width: clamp(260px, 45vw, 400px);
+    opacity: 0.45;
+  }
+
+  .botanical-inline {
+    width: clamp(200px, 50vw, 450px);
+    opacity: 0.35;
+  }
+
+  .botanical-inline--wide {
+    width: clamp(250px, 70vw, 600px);
+  }
+
   .section-content {
     max-width: min(90%, 900px);
   }
