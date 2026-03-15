@@ -23,6 +23,8 @@
         "allow": [
             "Edit(scratchpad/**)",
             "Write(scratchpad/**)",
+            "Edit(.claude/rules/**)",
+            "Write(.claude/rules/**)",
             "Skill",
             "WebFetch",
             "WebSearch"

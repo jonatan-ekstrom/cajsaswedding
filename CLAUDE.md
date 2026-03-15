@@ -64,7 +64,7 @@ The couple does **not** want traditional gifts. Instead, they want guests to con
 
 ## Design Direction
 
-The design should match the physical invitations (photos in `scratchpad/reference_photos/`):
+The design should match the physical invitations:
 
 - **Style:** Elegant, botanical, romantic
 - **Color palette:**
@@ -89,14 +89,15 @@ wedding/
 │   └── style.css
 ├── js/
 │   └── main.js
+├── .claude/
+│   └── rules/          # Contextual rules for Claude Code (design system, assets, Swish)
 ├── assets/
 │   ├── images/
 │   │   ├── florals/    # Botanical PNG decorations
 │   │   └── photos/     # Wedding & venue photos (JPG)
 │   └── icons/
 │       └── swish/      # Swish QR codes
-└── scratchpad/              # Reference material (not deployed, gitignored)
-    └── reference_photos/    # Invitation photos for design reference
+└── scratchpad/              # Reference material (gitignored)
 ```
 
 ## Agent Guidelines
@@ -116,26 +117,11 @@ wedding/
 
 ## Content Placeholders
 
-The following content is TBD and should use clear placeholders:
-- [x] Day's schedule/program details — implemented
-- [x] Swish QR codes and numbers for toastmasters — implemented
-- [ ] Couple quote text — draft provided, needs Cajsa & Filip's personalization
+- [ ] Couple quote text — needs Cajsa & Filip's personalization
 - [ ] Google Photos album link + QR code for photo sharing section
-- [ ] Couple photos for ambient imagery
-- [x] Gårdsby kyrka — couple's connection to the church (for venue description)
-- [ ] Alternative hotel names for Växjö FAQ (verify recommendations)
-- [ ] Custom domain configuration
+- [ ] Custom domain configuration (CNAME file + DNS)
 
-## Design Research
-
-Detailed design research is in the `research/` folder (not deployed):
-
-- `research/00-index.md` — Summary, reconciled decisions, implementation checklist
-- `research/01-scandinavian-trends.md` — Nordic design patterns, section layout guidance
-- `research/02-tech-stack.md` — CSS, animations, fonts, assets, components
-- `research/03-botanical-web-design.md` — Color palette, botanical CSS, hero design, accessibility
-
-### Key Decisions (from research)
+### Key Decisions
 
 | Decision | Choice |
 |----------|--------|
@@ -165,7 +151,7 @@ The following were explicitly decided during content review:
 
 ## Notes
 
-- The `scratchpad/` folder is gitignored; `scratchpad/reference_photos/` contains photos of the physical invitations
-- The `research/` folder contains design research — do NOT deploy
+- The `scratchpad/` folder is gitignored and used for local reference material
+- Design research has been consolidated into `.claude/rules/` (color palette, assets, Swish integration); full history in git under `research/`
 - RSVP is handled via email (filipcajsa2026@gmail.com), not on the website
 - The toastmasters are the contact for speeches/entertainment (tal/spex)
