@@ -498,6 +498,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* --- Couple Quote (transitional element, not a full section) --- */
+.couple-quote {
+  text-align: center;
+  padding: 2rem var(--section-padding-x) 3rem;
+  background-color: var(--cream);
+}
+
+.couple-quote .botanical-inline {
+  margin-bottom: 1.5rem;
+}
+
+.couple-quote blockquote {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.couple-quote blockquote p {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.couple-quote blockquote footer {
+  font-family: var(--font-small-caps);
+  font-size: var(--text-base);
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.couple-quote .quote-amp {
+  font-family: var(--font-heading);
+  font-style: italic;
+}
+
+
 /* --- 7. Botanical Decorations --- */
 .botanical {
   position: absolute;
