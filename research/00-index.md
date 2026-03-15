@@ -69,16 +69,21 @@ Use `<details>`/`<summary>` for zero-JS accordion behavior.
 ## Section Order (Final)
 
 ```
-1. Hero          — Names, date, countdown, botanical frame
-2. Bröllopsdag   — Day's timeline/schedule
-3. Plats         — Ceremony + reception venues, maps
-4. Boende        — Teleborgs Slott accommodation
-5. Gåvor         — Gift section (Swish to toastmasters) ★ PRIMARY FEATURE
-6. FAQ           — Dress code, children, contact, etc.
-7. Footer        — Toastmasters, email, credits
+1. Hero            — Names, date, countdown, botanical frame
+2. Couple Quote    — Short personal message from Cajsa & Filip (not a full section, styled quote element)
+3. Bröllopsdag     — Day's timeline/schedule
+4. Plats           — Ceremony + reception venues, maps, richer descriptions
+5. Boende          — Teleborgs Slott accommodation
+6. Gåvor           — Gift section (Swish to toastmasters) ★ PRIMARY FEATURE
+7. Dela era bilder — Photo sharing section with QR code to shared Google Photos album
+8. FAQ             — Dress code, children, contact, mobilfri vigsel, other hotels, +1 policy, etc.
+9. Footer          — Toastmasters, email, credits
 ```
 
-**Note:** Photo gallery is NOT a standalone section. Instead, integrate photos as ambient imagery within other sections (hero, venue, etc.) as they become available.
+**Notes:**
+- The couple quote (item 2) is a styled element between sections, not a full section with heading. Centered italic Cormorant Garamond, subtle botanical garland. Placeholder text for Cajsa & Filip to personalize.
+- Photo sharing (item 7) is a NEW standalone section added after the March 2025 content review. Includes a QR code linking to a shared Google Photos album so guests can upload their photos. Pairs naturally with an "unplugged ceremony" note.
+- Photo gallery as ambient imagery within sections remains the approach for *couple/venue photos*. The photo sharing section is for *guest-contributed photos*.
 
 ---
 
@@ -128,12 +133,19 @@ wedding/
 - [ ] Entrance animations with `prefers-reduced-motion` guard
 
 ### Phase 3: Content Sections
-- [ ] Bröllopsdag — centered vertical timeline
-- [ ] Plats — two-card layout (ceremony + reception) with map links
-- [ ] Boende — featured card with booking details
-- [ ] Gåvor — warm message + Swish QR/contact cards (★ showcase section)
-- [ ] FAQ — `<details>`/`<summary>` accordion
-- [ ] Footer — contact info, toastmasters
+- [x] Bröllopsdag — centered vertical timeline
+- [x] Plats — two-card layout (ceremony + reception) with map links
+- [x] Boende — featured card with booking details
+- [x] Gåvor — warm message + Swish QR/contact cards (★ showcase section)
+- [x] FAQ — `<details>`/`<summary>` accordion
+- [x] Footer — contact info, toastmasters
+
+### Phase 7: Content Enhancements (March 2025)
+- [ ] Couple quote — styled personal message between hero and Bröllopsdagen
+- [ ] Plats — richer venue descriptions (atmosphere, couple's connection to venues)
+- [ ] Dela era bilder — new photo sharing section with Google Photos album QR code + unplugged ceremony note
+- [ ] FAQ additions: mobilfri vigsel, andra hotell i Växjö, +1 policy
+- [ ] Nav update — add "Bilder" link for the new photo sharing section
 
 ### Phase 4: Navigation
 - [ ] Sticky nav (transparent → solid on scroll)
@@ -161,9 +173,30 @@ wedding/
 
 ## Key Content Placeholders (TBD from couple)
 
-- [ ] Day's schedule/program details
-- [ ] Parking and transport information
-- [ ] Swish QR codes for toastmasters
-- [ ] Couple photos
-- [ ] Additional FAQ items
-- [ ] Custom domain
+- [x] Day's schedule/program details — filled in with timeline
+- [x] Swish QR codes for toastmasters — implemented with QR images + deep links
+- [ ] Couple quote text — draft provided, needs Cajsa & Filip's personalization
+- [ ] Google Photos album link + QR code for photo sharing section
+- [ ] Couple photos for ambient imagery
+- [ ] Custom domain configuration
+- [ ] Alternative hotel details for Växjö (verify recommendations)
+- [ ] Gårdsby kyrka — couple's connection to the church (for richer venue description)
+
+## Decisions Log (March 2025 Content Review)
+
+Decisions made during content review with site owner (Jonatan Ekström):
+
+| Item | Decision | Rationale |
+|------|----------|-----------|
+| OSA reminder banner | **Skip** | Site launches after OSA deadline (March 31) has passed |
+| Transport between venues | **Skip** | Venues are close; guests expected to drive themselves |
+| Parking info | **Skip** | Available at both venues; no need to state explicitly |
+| Personal couple quote | **Add** | Short styled quote between hero and Bröllopsdagen |
+| Photo sharing section | **Add** | New section with QR code to Google Photos album |
+| Day-after brunch | **Skip** | Unknown if planned; skip for now |
+| Richer venue descriptions | **Add** | Add atmosphere/character to Plats venue cards |
+| Mobilfri vigsel FAQ | **Add** | Unplugged ceremony note in FAQ |
+| Other hotels FAQ | **Add** | Alternative accommodation options in Växjö |
+| +1 / plus-one FAQ | **Add** | No plus-ones; invitation is per named guest |
+| Song requests | **Skip** | Not needed |
+| Memorial section | **Skip** | Not needed |

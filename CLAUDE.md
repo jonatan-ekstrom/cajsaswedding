@@ -39,15 +39,17 @@ Rooms available at Teleborgs Slott. Guests book directly:
 
 ## Website Sections
 
-The site should include the following sections (single-page layout or minimal navigation):
+The site is a single-page layout with the following sections:
 
 1. **Hero / Landing** — Names, date, countdown timer
-2. **Bröllopsdag (Schedule/Program)** — Timeline of the day (placeholder content for now)
-3. **Plats & Hitta hit (Venue & Getting there)** — Ceremony and reception locations, map
-4. **Boende (Accommodation)** — Info about Teleborgs Slott rooms + potentially other hotel tips
-5. **Gåvor / Bröllopsgåva (Gifts)** — **This is the primary reason for the website** (see below)
-6. **Bildgalleri (Photo gallery)** — Placeholder section for engagement/couple photos
-7. **Vanliga frågor (FAQ)** — Dress code, children policy, contact info, etc.
+2. **Couple Quote** — Short personal message from Cajsa & Filip (styled element, not a full section)
+3. **Bröllopsdag (Schedule/Program)** — Timeline of the day
+4. **Plats & Hitta hit (Venue & Getting there)** — Ceremony and reception locations with richer descriptions, map links
+5. **Boende (Accommodation)** — Info about Teleborgs Slott rooms
+6. **Gåvor / Bröllopsgåva (Gifts)** — **This is the primary reason for the website** (see below)
+7. **Dela era bilder (Photo Sharing)** — QR code / link to shared Google Photos album for guest photos + unplugged ceremony note
+8. **Vanliga frågor (FAQ)** — Dress code, children policy, mobilfri vigsel, +1 policy, other hotels, contact info
+9. **Footer** — Toastmasters, email
 
 ## Gift Section — Key Feature
 
@@ -113,10 +115,13 @@ wedding/
 ## Content Placeholders
 
 The following content is TBD and should use clear placeholders:
-- [ ] Day's schedule/program details
-- [ ] Swish QR codes and numbers for toastmasters
-- [ ] Couple photos for the gallery
-- [ ] Additional FAQ items
+- [x] Day's schedule/program details — implemented
+- [x] Swish QR codes and numbers for toastmasters — implemented
+- [ ] Couple quote text — draft provided, needs Cajsa & Filip's personalization
+- [ ] Google Photos album link + QR code for photo sharing section
+- [ ] Couple photos for ambient imagery
+- [ ] Gårdsby kyrka — couple's connection to the church (for venue description)
+- [ ] Alternative hotel names for Växjö FAQ (verify recommendations)
 - [ ] Custom domain configuration
 
 ## Design Research
@@ -140,7 +145,18 @@ Detailed design research is in the `research/` folder (not deployed):
 | Botanical assets | PNG/WebP from free sources (Freepik, Pixabay, rawpixel) |
 | Maps | Google Maps links + optional OpenStreetMap embed |
 | FAQ | `<details>`/`<summary>` (no JS) |
-| Photo gallery | Integrated as ambient imagery, not standalone section |
+| Couple/venue photos | Integrated as ambient imagery, not standalone section |
+| Guest photo sharing | Standalone "Dela era bilder" section with Google Photos QR code |
+
+## Logistics Decisions (March 2025)
+
+The following were explicitly decided during content review:
+- **No OSA reminder** — site launches after the March 31 deadline
+- **No transport info** — venues are close; guests drive themselves
+- **No explicit parking info** — available at both venues, self-evident
+- **No plus-ones** — invitation is per named guest only
+- **Unplugged ceremony** — guests asked to put phones away during vigsel
+- **Site launches post-OSA** — this was a late ask by the bride
 
 ## Notes
 
