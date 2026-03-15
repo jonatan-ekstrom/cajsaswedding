@@ -117,8 +117,8 @@ wedding/
 
 ## Content Placeholders
 
-- [ ] Couple quote text — needs Cajsa & Filip's personalization
-- [ ] Google Photos album link + QR code for photo sharing section
+- [x] Couple quote text — approved by Cajsa
+- [x] Google Photos album link + QR code for photo sharing section
 - [ ] Custom domain: register `.se` domain at Loopia, configure DNS (A records + CNAME), add CNAME file
 
 ### Key Decisions
