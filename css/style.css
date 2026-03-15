@@ -1218,17 +1218,22 @@ summary:focus-visible {
     font-size: var(--text-base);
   }
 
-  /* Botanicals — scale down on mobile */
+  /* Botanicals — scale down on mobile; use non-negative offsets
+     so the full image stays inside overflow:hidden */
   .botanical-tr,
   .botanical-br {
     width: clamp(130px, 40vw, 200px);
-    opacity: 0.5;
+    opacity: 0.55;
+    right: 0;
+    top: 0;
   }
 
   .botanical-bl,
   .botanical-tl {
     width: clamp(100px, 35vw, 180px);
-    opacity: 0.4;
+    opacity: 0.45;
+    left: 0;
+    bottom: 0;
   }
 
   .countdown-wreath {
@@ -1275,13 +1280,13 @@ summary:focus-visible {
   .botanical-tr,
   .botanical-br {
     width: 120px;
-    opacity: 0.35;
+    opacity: 0.45;
   }
 
   .botanical-bl,
   .botanical-tl {
     width: 100px;
-    opacity: 0.3;
+    opacity: 0.35;
   }
 
   .countdown-wreath {
