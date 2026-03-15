@@ -89,7 +89,13 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 70px;
+  overflow-x: hidden;
+  scrollbar-width: none;            /* Firefox */
   -webkit-text-size-adjust: 100%;
+}
+
+html::-webkit-scrollbar {
+  display: none;                    /* Chrome, Safari, Edge */
 }
 
 body {
