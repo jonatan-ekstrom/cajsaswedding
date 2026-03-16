@@ -59,25 +59,8 @@ The couple does **not** want traditional gifts. Instead, they want guests to con
 - The toastmasters pool all contributions and give a lump sum to the couple after the wedding
 - This way Cajsa & Filip never know who gave what (or if someone chose not to give)
 - **No suggested amount** — completely voluntary and open
-- The page should display Swish QR codes and/or phone numbers for the toastmasters (placeholder for now — assets to be provided)
+- The page displays Swish QR codes and phone numbers for the toastmasters
 - Tone: warm, no-pressure, appreciative — emphasize that presence is the greatest gift
-
-## Design Direction
-
-The design should match the physical invitations:
-
-- **Style:** Elegant, botanical, romantic
-- **Color palette:**
-  - White/cream background
-  - Sage/olive green (leaves, eucalyptus)
-  - Dusty/steel blue accent (flowers)
-  - Dark gray or charcoal for body text
-  - Warm gold or dark olive for accent text
-- **Typography:**
-  - Elegant script/cursive font for the couple's names and headings (similar to invitation)
-  - Clean serif or sans-serif for body text
-- **Decorative elements:** Watercolor-style botanical illustrations (leaves, roses, eucalyptus) — matching the invitation aesthetic
-- **Mood:** Light, airy, refined — lots of whitespace
 
 ## File Structure
 
@@ -115,12 +98,6 @@ wedding/
 - Use Google Fonts or similar for web fonts (find close matches to the invitation style)
 - All text content in Swedish
 
-## Content Placeholders
-
-- [x] Couple quote text — approved by Cajsa
-- [x] Google Photos album link + QR code for photo sharing section
-- [x] Custom domain: `bringe2026.se` live with HTTPS (Loopia domain, Cloudflare DNS, GitHub Pages) — see `.claude/rules/deployment.md`
-
 ### Key Decisions
 
 | Decision | Choice |
@@ -139,7 +116,7 @@ wedding/
 | Breakpoints | 480px (medium mobile), 768px (tablet layout + botanicals), 1024px (desktop nav + full botanicals) |
 | Desktop nav | Horizontal links at 1024px+; hamburger menu below (6 Swedish labels don't fit at 768px) |
 
-## Logistics Decisions (March 2025)
+## Logistics Decisions
 
 The following were explicitly decided during content review:
 - **No OSA reminder** — site launches after the March 31 deadline
@@ -152,6 +129,5 @@ The following were explicitly decided during content review:
 ## Notes
 
 - The `scratchpad/` folder is gitignored and used for local reference material
-- Design research has been consolidated into `.claude/rules/` (color palette, assets, Swish integration); full history in git under `research/`
 - RSVP is handled via email (filipcajsa2026@gmail.com), not on the website
 - The toastmasters are the contact for speeches/entertainment (tal/spex)
