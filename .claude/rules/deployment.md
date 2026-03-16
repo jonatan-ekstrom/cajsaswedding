@@ -40,34 +40,20 @@ git add -A && git commit -m "Update site" && git push origin master
 
 - ~~Replace Loopia defaults (`ns1.loopia.se`, `ns2.loopia.se`) with Cloudflare nameservers~~
 - ~~Used "Tvinga ändring" (force change) to push through~~
-- **Status:** Waiting for Cloudflare to show "Active" (propagation in progress)
+### Step 4: Verify domain in GitHub (account-level) ✅ DONE (2026-03-16)
 
-### Step 4: Verify domain in GitHub (account-level)
+- ~~GitHub → Settings (account) → Pages → "Add a domain" → entered `bringe2026.se`~~
+- ~~Added TXT record in Cloudflare for `_github-pages-challenge-jonatan-ekstrom`~~
+- ~~Verified successfully~~
 
-- Go to GitHub → **Settings** (account, not repo) → **Pages** → **"Add a domain"**
-- Enter your domain — GitHub gives you a TXT record value
-- Add the TXT record **in Cloudflare** (not Loopia):
+### Step 5: Add custom domain in GitHub repo settings ✅ DONE (2026-03-16)
 
-| Type | Name | Content |
-|------|------|---------|
-| TXT | `_github-pages-challenge-jonatan-ekstrom` | *(value from GitHub)* |
+- ~~Repo → Settings → Pages → Custom domain → `bringe2026.se` → Save~~
+- ~~CNAME file auto-created and pulled locally~~
 
-- Wait for DNS propagation (usually a few minutes via Cloudflare), then click **Verify** in GitHub
+### Step 6: Configure DNS records in Cloudflare ✅ DONE (2026-03-16)
 
-### Step 5: Add custom domain in GitHub repo settings
-
-Do this **before** configuring A/CNAME records to prevent domain takeover.
-
-- Repo → **Settings → Pages → Custom domain** → enter domain → **Save**
-- This auto-creates a `CNAME` file in the repo — pull it locally: `git pull origin master`
-
-### Step 6: Configure DNS records in Cloudflare
-
-Go to Cloudflare → your domain → **DNS → Records**. Add the following records.
-
-> **Important:** Set all records to **"DNS only"** (gray cloud icon, proxy OFF). GitHub Pages needs direct DNS to issue its Let's Encrypt SSL certificate.
-
-**A records** (apex `@`):
+All records set to **DNS only** (gray cloud, proxy OFF):
 
 | Type | Name | Content | Proxy |
 |------|------|---------|-------|
@@ -75,24 +61,16 @@ Go to Cloudflare → your domain → **DNS → Records**. Add the following reco
 | A | `@` | `185.199.109.153` | DNS only |
 | A | `@` | `185.199.110.153` | DNS only |
 | A | `@` | `185.199.111.153` | DNS only |
-
-**CNAME record** (www subdomain):
-
-| Type | Name | Content | Proxy |
-|------|------|---------|-------|
 | CNAME | `www` | `jonatan-ekstrom.github.io` | DNS only |
 
-### Step 7: Wait for SSL and enable HTTPS
+### Step 7: Wait for SSL and enable HTTPS ✅ DONE (2026-03-16)
 
-- GitHub Pages will automatically provision a Let's Encrypt certificate once DNS resolves
-- Check status at: Repo → **Settings → Pages** — wait for green checkmark (can take 5 min – 1h)
-- Once green, tick **"Enforce HTTPS"**
+- ~~Let's Encrypt certificate provisioned (3/3 steps)~~
+- ~~"Enforce HTTPS" enabled~~
 
-### Step 8: Cloudflare SSL settings
+### Step 8: Cloudflare SSL settings ✅ DONE (2026-03-16)
 
-- Go to Cloudflare → your domain → **SSL/TLS**
-- Set encryption mode to **"Full"** (not "Full (Strict)" and not "Flexible")
-- This ensures Cloudflare connects to GitHub's cert properly if you ever enable the proxy later
+- ~~SSL/TLS encryption mode set to "Full"~~
 
 ## Verification Checklist
 
@@ -104,14 +82,14 @@ Go to Cloudflare → your domain → **DNS → Records**. Add the following reco
 - [x] Navigation and smooth scroll work
 - [x] Site is responsive on mobile
 
-**After Phase 2:**
-- [ ] Cloudflare dashboard shows domain as "Active" (nameservers propagated)
-- [ ] GitHub domain verification shows green checkmark (TXT record works)
-- [ ] `CNAME` file exists in repo (auto-created by GitHub, pulled locally)
-- [ ] `dig bringe2026.se` returns GitHub's A record IPs (`185.199.10x.153`)
-- [ ] `dig www.bringe2026.se` returns `jonatan-ekstrom.github.io`
-- [ ] `https://bringe2026.se` loads with valid SSL (Let's Encrypt cert)
-- [ ] `https://www.bringe2026.se` redirects correctly
-- [ ] Old GitHub Pages URL redirects to custom domain
-- [ ] Cloudflare SSL mode set to "Full"
-- [ ] All Cloudflare DNS records set to "DNS only" (gray cloud)
+**After Phase 2:** ✅ (2026-03-16)
+- [x] Cloudflare dashboard shows domain as "Active" (nameservers propagated)
+- [x] GitHub domain verification shows green checkmark (TXT record works)
+- [x] `CNAME` file exists in repo (auto-created by GitHub, pulled locally)
+- [x] `dig bringe2026.se` returns GitHub's A record IPs (`185.199.10x.153`)
+- [x] `dig www.bringe2026.se` returns `jonatan-ekstrom.github.io`
+- [x] `https://bringe2026.se` loads with valid SSL (Let's Encrypt cert)
+- [x] `https://www.bringe2026.se` redirects correctly
+- [x] Old GitHub Pages URL redirects to custom domain
+- [x] Cloudflare SSL mode set to "Full"
+- [x] All Cloudflare DNS records set to "DNS only" (gray cloud)

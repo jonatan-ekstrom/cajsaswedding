@@ -119,7 +119,7 @@ wedding/
 
 - [x] Couple quote text — approved by Cajsa
 - [x] Google Photos album link + QR code for photo sharing section
-- [ ] Custom domain: register `.se` domain at Loopia (domain only), DNS via Cloudflare (free), add CNAME file — see `.claude/rules/deployment.md`
+- [x] Custom domain: `bringe2026.se` live with HTTPS (Loopia domain, Cloudflare DNS, GitHub Pages) — see `.claude/rules/deployment.md`
 
 ### Key Decisions
 
