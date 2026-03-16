@@ -6,7 +6,7 @@ Static wedding website for **Cajsa Ekström & Filip Bringe**, hosted on GitHub P
 
 - **Tech stack:** Plain HTML, CSS, and JavaScript — no build tools or frameworks
 - **Language:** Swedish
-- **Hosting:** GitHub Pages with custom domain (TBD) — see `.claude/rules/deployment.md`
+- **Hosting:** GitHub Pages with custom domain `bringe2026.se` — see `.claude/rules/deployment.md`
 - **Repository:** `master` branch for deployment
 
 ## Wedding Details
@@ -119,7 +119,7 @@ wedding/
 
 - [x] Couple quote text — approved by Cajsa
 - [x] Google Photos album link + QR code for photo sharing section
-- [ ] Custom domain: register `.se` domain at Loopia, configure DNS (A records + CNAME), add CNAME file
+- [ ] Custom domain: register `.se` domain at Loopia (domain only), DNS via Cloudflare (free), add CNAME file — see `.claude/rules/deployment.md`
 
 ### Key Decisions
 
