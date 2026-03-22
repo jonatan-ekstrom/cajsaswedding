@@ -56,6 +56,13 @@
     const menu = document.getElementById('nav-menu');
     if (!toggle || !menu) return;
 
+    var leaf = toggle.querySelector('.nav-leaf');
+    if (leaf) {
+      leaf.addEventListener('animationend', function () {
+        leaf.style.animation = 'none';
+      });
+    }
+
     toggle.addEventListener('click', function () {
       const isOpen = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!isOpen));
